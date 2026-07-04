@@ -2,6 +2,7 @@ import siteConfig from "@/site.config";
 import Hero from "@/components/Hero";
 import BigNumbers from "@/components/BigNumbers";
 import Pain from "@/components/Pain";
+import HowItWorks from "@/components/HowItWorks";
 import ValueStack from "@/components/ValueStack";
 import GuaranteeBadge from "@/components/GuaranteeBadge";
 import SocialProofWall from "@/components/SocialProofWall";
@@ -15,6 +16,7 @@ export default function Home() {
         <BigNumbers bigNumbers={siteConfig.bigNumbers} />
       )}
       {siteConfig.pain?.enabled && <Pain pain={siteConfig.pain} />}
+      {siteConfig.plan?.enabled && <HowItWorks plan={siteConfig.plan} />}
       {siteConfig.valueStack?.enabled && (
         <ValueStack valueStack={siteConfig.valueStack} />
       )}
