@@ -23,11 +23,11 @@ const sizeClasses: Record<Size, string> = {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-[#ffd800] text-[#0a0a0a] font-bold hover:bg-[#ffe74d] brick-shadow border border-[#ffd800]",
+    "bg-accent text-accent-ink font-bold hover:bg-accent-hover brick-shadow border border-accent",
   secondary:
-    "bg-[#1c1c1c] text-white font-semibold border border-[#404040] hover:bg-[#262626] hover:border-[#525252]",
+    "bg-surface-2 text-fg font-semibold border border-border-strong hover:bg-border hover:border-muted-2",
   ghost:
-    "bg-transparent text-white font-semibold border border-[#404040] hover:bg-[#141414]",
+    "bg-transparent text-fg font-semibold border border-border-strong hover:bg-surface",
 };
 
 export default function CTAButton({
@@ -44,7 +44,7 @@ export default function CTAButton({
     href.startsWith("tel:") ||
     href.startsWith("mailto:");
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-md transition-all duration-150 tracking-tight leading-none whitespace-nowrap";
+    "inline-flex items-center justify-center gap-2 rounded-[var(--radius-btn)] transition-all duration-150 tracking-tight leading-none whitespace-nowrap";
   const classes = `${base} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 
   if (isExternal) {

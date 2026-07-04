@@ -95,6 +95,22 @@ export interface FinalCta {
 
 export type LandingRegister = "hormozi";
 
+/**
+ * Curated art directions. Each vibe sets the full token set — palette,
+ * display/body fonts, radii, glow — in app/globals.css:
+ *  - midnight  — ink black, heavy display sans, electric accent (default)
+ *  - editorial — warm paper, display serif, restrained; premium services
+ *  - crisp     — cool off-white, tight geometric sans; professional services
+ *  - warm      — cream + terracotta, soft serif, rounded; family businesses
+ *  - voltage   — near-black, grotesk display, neon accent; max offer energy
+ */
+export type DesignVibe =
+  | "midnight"
+  | "editorial"
+  | "crisp"
+  | "warm"
+  | "voltage";
+
 export interface SiteConfig {
   businessName: string;
   tagline: string;
@@ -113,6 +129,18 @@ export interface SiteConfig {
     primaryColor: string;
     accentColor: string;
     darkMode: boolean;
+  };
+
+  /**
+   * Art direction. `vibe` picks the curated direction; `accent` (and
+   * `accentInk` — text color ON the accent) optionally override the
+   * vibe's default accent with the business's brand color. Omitted →
+   * midnight with its stock accent.
+   */
+  design?: {
+    vibe: DesignVibe;
+    accent?: string;
+    accentInk?: string;
   };
 
   landingRegister: LandingRegister;
