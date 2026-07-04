@@ -8,11 +8,11 @@ interface HeaderProps {
 
 export default function Header({ config }: HeaderProps) {
   return (
-    <header className="sticky top-[36px] z-40 border-b border-[#262626] bg-[#0a0a0a]/90 backdrop-blur supports-[backdrop-filter]:bg-[#0a0a0a]/75">
+    <header className="sticky top-[36px] z-40 border-b border-border bg-bg/90 backdrop-blur supports-[backdrop-filter]:bg-bg/75">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-lg sm:text-xl font-black tracking-tight text-white truncate max-w-[180px] sm:max-w-none">
+            <span className="text-lg sm:text-xl font-black tracking-tight text-fg truncate max-w-[180px] sm:max-w-none">
               {config.businessName}
             </span>
           </Link>
@@ -22,7 +22,7 @@ export default function Header({ config }: HeaderProps) {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-semibold text-[#a3a3a3] hover:text-white transition-colors"
+                className="text-sm font-semibold text-muted hover:text-fg transition-colors"
               >
                 {item.label}
               </a>
@@ -33,7 +33,7 @@ export default function Header({ config }: HeaderProps) {
             {config.phone && (
               <a
                 href={`tel:${config.phone.replace(/[^+\d]/g, "")}`}
-                className="hidden lg:inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#ffd800] transition-colors"
+                className="hidden lg:inline-flex items-center gap-2 text-sm font-bold text-fg hover:text-accent transition-colors"
                 data-cta="header-phone"
               >
                 <svg

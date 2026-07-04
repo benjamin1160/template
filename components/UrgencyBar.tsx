@@ -7,7 +7,7 @@ interface UrgencyBarProps {
 export default function UrgencyBar({ urgency }: UrgencyBarProps) {
   if (!urgency.enabled) return null;
   return (
-    <div className="sticky top-0 z-50 bg-[#ffd800] text-[#0a0a0a]">
+    <div className="sticky top-0 z-50 bg-accent text-accent-ink">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-2 flex items-center justify-center gap-4 text-center text-sm sm:text-base">
         <span className="font-bold tracking-tight">{urgency.message}</span>
         {urgency.ctaLabel && urgency.ctaHref && (

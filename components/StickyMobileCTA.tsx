@@ -25,14 +25,14 @@ export default function StickyMobileCTA({
     ctaLink.startsWith("mailto:");
   return (
     <div
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-[#262626] bg-[#0a0a0a]/95 backdrop-blur"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-border bg-bg/95 backdrop-blur"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <div className="flex gap-2 p-3">
         {phone && (
           <a
             href={`tel:${phone.replace(/[^+\d]/g, "")}`}
-            className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-md border border-[#404040] bg-[#141414] text-white"
+            className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-md border border-border-strong bg-surface text-fg"
             aria-label={`Call ${phone}`}
             data-cta="mobile-call"
           >
@@ -58,7 +58,7 @@ export default function StickyMobileCTA({
               ? "noopener noreferrer"
               : undefined
           }
-          className="flex-1 inline-flex items-center justify-center rounded-md bg-[#ffd800] px-5 py-3 text-base font-bold text-[#0a0a0a] brick-shadow"
+          className="flex-1 inline-flex items-center justify-center rounded-md bg-accent px-5 py-3 text-base font-bold text-accent-ink brick-shadow"
           data-cta="mobile-primary"
         >
           {ctaText}

@@ -12,7 +12,7 @@ function Stars({ rating }: { rating: number }) {
         <svg
           key={i}
           viewBox="0 0 20 20"
-          className={`h-4 w-4 ${filled ? "text-[#ffd800]" : "text-[#404040]"}`}
+          className={`h-4 w-4 ${filled ? "text-accent" : "text-border-strong"}`}
           fill="currentColor"
           aria-hidden="true"
         >
@@ -25,11 +25,11 @@ function Stars({ rating }: { rating: number }) {
 
 export default function SocialProofWall({ socialProof }: SocialProofWallProps) {
   return (
-    <section id="proof" className="bg-[#0a0a0a] py-20 md:py-28">
+    <section id="proof" className="bg-bg py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
         {socialProof.headline && (
           <div className="text-center mb-14">
-            <h2 className="display text-4xl sm:text-5xl md:text-6xl text-white">
+            <h2 className="display text-4xl sm:text-5xl md:text-6xl text-fg">
               {socialProof.headline}
             </h2>
           </div>
@@ -38,29 +38,29 @@ export default function SocialProofWall({ socialProof }: SocialProofWallProps) {
           {socialProof.testimonials.map((t, i) => (
             <div
               key={i}
-              className="break-inside-avoid rounded-2xl border border-[#262626] bg-[#141414] p-6 sm:p-7"
+              className="break-inside-avoid rounded-2xl border border-border bg-surface p-6 sm:p-7"
             >
               <div className="flex items-center justify-between gap-3 mb-3">
                 <Stars rating={t.rating} />
                 {t.source && (
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#737373]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-2">
                     via {t.source}
                   </span>
                 )}
               </div>
-              <blockquote className="text-base sm:text-lg text-white/90 leading-relaxed">
+              <blockquote className="text-base sm:text-lg text-fg/90 leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
-              <div className="mt-5 pt-5 border-t border-[#262626] flex items-center justify-between gap-3">
+              <div className="mt-5 pt-5 border-t border-border flex items-center justify-between gap-3">
                 <div>
-                  <div className="text-sm font-bold text-white">{t.name}</div>
-                  <div className="text-xs text-[#a3a3a3]">
+                  <div className="text-sm font-bold text-fg">{t.name}</div>
+                  <div className="text-xs text-muted">
                     {t.role}
                     {t.company ? ` · ${t.company}` : ""}
                   </div>
                 </div>
                 {t.result && (
-                  <div className="rounded-full border border-[#ffd800]/40 bg-[#ffd800]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#ffd800] whitespace-nowrap">
+                  <div className="rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent whitespace-nowrap">
                     {t.result}
                   </div>
                 )}

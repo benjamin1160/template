@@ -20,18 +20,18 @@ export default function SectionHeading({
     <div className={`${alignClasses} max-w-4xl ${className}`}>
       {eyebrow && (
         <div
-          className={`text-sm font-bold uppercase tracking-widest text-[#ffd800] mb-4 ${
+          className={`text-sm font-bold uppercase tracking-widest text-accent mb-4 ${
             align === "center" ? "" : ""
           }`}
         >
           {eyebrow}
         </div>
       )}
-      <h2 className="display text-4xl sm:text-5xl md:text-6xl text-white">
+      <h2 className="display text-4xl sm:text-5xl md:text-6xl text-fg">
         {children}
       </h2>
       {subline && (
-        <p className="mt-6 text-lg sm:text-xl text-[#a3a3a3] max-w-2xl mx-auto">
+        <p className="mt-6 text-lg sm:text-xl text-muted max-w-2xl mx-auto">
           {subline}
         </p>
       )}

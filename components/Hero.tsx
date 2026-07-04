@@ -10,7 +10,7 @@ export default function Hero({ hero }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-[#0a0a0a] pt-16 pb-20 sm:pt-24 sm:pb-32 md:pt-32 md:pb-40"
+      className="relative overflow-hidden bg-bg pt-16 pb-20 sm:pt-24 sm:pb-32 md:pt-32 md:pb-40"
     >
       {bgUrl && (
         <div className="absolute inset-0">
@@ -21,7 +21,7 @@ export default function Hero({ hero }: HeroProps) {
             aria-hidden="true"
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-[#0a0a0a]/70" />
+          <div className="absolute inset-0 bg-bg/70" />
         </div>
       )}
       {hero.backgroundVideo && (
@@ -40,17 +40,17 @@ export default function Hero({ hero }: HeroProps) {
 
       <div className="relative mx-auto max-w-6xl px-6 sm:px-8 text-center">
         {hero.eyebrow && (
-          <div className="reveal inline-flex items-center gap-2 rounded-full border border-[#404040] bg-[#141414] px-4 py-1.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#ffd800] mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#ffd800]" />
+          <div className="reveal inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-4 py-1.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-accent mb-8">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             {hero.eyebrow}
           </div>
         )}
 
-        <h1 className="reveal reveal-d1 display text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] text-white">
+        <h1 className="reveal reveal-d1 display text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] text-fg">
           {hero.headline}
         </h1>
 
-        <p className="reveal reveal-d2 mt-8 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-[#a3a3a3] leading-relaxed">
+        <p className="reveal reveal-d2 mt-8 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-muted leading-relaxed">
           {hero.subheadline}
         </p>
 
@@ -76,12 +76,12 @@ export default function Hero({ hero }: HeroProps) {
         </div>
 
         {hero.trustBullets && hero.trustBullets.length > 0 && (
-          <ul className="reveal reveal-d4 mt-12 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm sm:text-base text-[#a3a3a3]">
+          <ul className="reveal reveal-d4 mt-12 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm sm:text-base text-muted">
             {hero.trustBullets.map((bullet, i) => (
               <li key={i} className="inline-flex items-center gap-2">
                 <svg
                   viewBox="0 0 20 20"
-                  className="h-5 w-5 flex-shrink-0 text-[#ffd800]"
+                  className="h-5 w-5 flex-shrink-0 text-accent"
                   fill="currentColor"
                   aria-hidden="true"
                 >
@@ -91,7 +91,7 @@ export default function Hero({ hero }: HeroProps) {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="font-medium text-white/90">{bullet}</span>
+                <span className="font-medium text-fg/90">{bullet}</span>
               </li>
             ))}
           </ul>
