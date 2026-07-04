@@ -28,6 +28,13 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface PlanStep {
+  name: string;
+  description: string;
+  /** What the customer HAS at the end of this step. */
+  outcome?: string;
+}
+
 export interface ServiceItem {
   slug: string;
   name: string;
@@ -189,6 +196,20 @@ export interface SiteConfig {
     enabled: boolean;
     headline: string;
     points: string[];
+  };
+
+  /**
+   * StoryBrand process plan — exactly 3 verb-first steps that make
+   * working with the business look easy. Renders between Pain and the
+   * value stack (problem → plan → offer).
+   */
+  plan?: {
+    enabled: boolean;
+    headline: string;
+    subheadline?: string;
+    steps: PlanStep[];
+    ctaText?: string;
+    ctaLink?: string;
   };
 
   valueStack?: {
