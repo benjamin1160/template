@@ -117,6 +117,18 @@ export interface SiteConfig {
 
   landingRegister: LandingRegister;
 
+  /**
+   * GoHighLevel sub-account binding. When present (populated by the
+   * quick-launch pipeline at generation time), the layout renders the
+   * LeadConnector chat widget bound to this location so chats land in
+   * the client's GHL conversations inbox. Set chatWidget: false to
+   * suppress the widget without removing the binding.
+   */
+  ghl?: {
+    locationId: string;
+    chatWidget?: boolean;
+  };
+
   nav: NavItem[];
 
   urgency?: {

@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyMobileCTA, { buildProps as stickyProps } from "@/components/StickyMobileCTA";
 import JsonLd from "@/components/JsonLd";
+import ChatWidget from "@/components/ChatWidget";
 import "./globals.css";
 
 const inter = Inter({
@@ -57,6 +58,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer config={siteConfig} />
         <StickyMobileCTA {...stickyProps(siteConfig)} />
+        <ChatWidget config={siteConfig} />
       </body>
     </html>
   );
