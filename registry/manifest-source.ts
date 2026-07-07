@@ -6,6 +6,7 @@ import {
   VIBES,
 } from "./sections";
 import { ARCHETYPES } from "./archetypes";
+import { ICON_NAMES } from "./icons";
 
 /**
  * Assembles the machine-readable manifest emitted to registry/manifest.json
@@ -16,6 +17,7 @@ export function buildManifest(): RegistryManifest {
   return {
     registryVersion: REGISTRY_VERSION,
     vibes: VIBES,
+    icons: [...ICON_NAMES],
     defaultSectionPlan: DEFAULT_SECTIONS,
     sections: SECTIONS,
     archetypes: ARCHETYPES,

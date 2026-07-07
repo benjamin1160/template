@@ -84,6 +84,8 @@ export interface ArchetypeDef {
 export interface RegistryManifest {
   registryVersion: string;
   vibes: DesignVibe[];
+  /** Allowed values for icon fields (ServiceItem.icon etc.). */
+  icons: string[];
   /** Section plan used when site.config has no `sections` array. */
   defaultSectionPlan: { type: SectionType; variant?: string }[];
   sections: SectionDef[];

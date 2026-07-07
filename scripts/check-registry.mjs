@@ -77,6 +77,16 @@ try {
   // 5. Fixtures cover every section type (catalog preview + CI render need them).
   for (const type of sectionTypes)
     if (!(type in fixtures)) fail(`registry/fixtures.ts missing fixture for section "${type}"`);
+
+  // 6. Icon menu (registry/icons.ts) matches the lib/icon-map.ts keys.
+  const iconMapSrc = fs.readFileSync(path.join(ROOT, "lib", "icon-map.ts"), "utf8");
+  const iconMapBody = iconMapSrc.slice(iconMapSrc.indexOf("export const ICONS"));
+  for (const name of manifest.icons) {
+    const key = /[^a-z]/.test(name.replace(/-/g, "")) ? name : name;
+    const pattern = name.includes("-") ? `"${key}":` : `${key}:`;
+    if (!iconMapBody.includes(pattern))
+      fail(`icon "${name}" listed in registry/icons.ts but missing from lib/icon-map.ts ICONS`);
+  }
 } finally {
   cleanup();
 }

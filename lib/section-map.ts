@@ -1,5 +1,8 @@
 import type { ComponentType } from "react";
 import HeroClassic from "@/components/sections/hero/HeroClassic";
+import HeroSplit from "@/components/sections/hero/HeroSplit";
+import HeroEditorial from "@/components/sections/hero/HeroEditorial";
+import SocialProofSpotlight from "@/components/sections/socialProof/SocialProofSpotlight";
 import BigNumbersClassic from "@/components/sections/bigNumbers/BigNumbersClassic";
 import PainClassic from "@/components/sections/pain/PainClassic";
 import HowItWorksClassic from "@/components/sections/plan/HowItWorksClassic";
@@ -16,6 +19,9 @@ import FAQClassic from "@/components/sections/faq/FAQClassic";
  */
 export const SECTION_COMPONENTS = {
   "hero/classic": HeroClassic,
+  "hero/split": HeroSplit,
+  "hero/editorial": HeroEditorial,
+  "socialProof/spotlight": SocialProofSpotlight,
   "bigNumbers/classic": BigNumbersClassic,
   "pain/classic": PainClassic,
   "plan/classic": HowItWorksClassic,

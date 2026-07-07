@@ -134,13 +134,15 @@ export interface SectionInstance {
  *  - crisp     — cool off-white, tight geometric sans; professional services
  *  - warm      — cream + terracotta, soft serif, rounded; family businesses
  *  - voltage   — near-black, grotesk display, neon accent; max offer energy
+ *  - playful   — sunny cream, rounded sans, punchy accent; kids/pets/events
  */
 export type DesignVibe =
   | "midnight"
   | "editorial"
   | "crisp"
   | "warm"
-  | "voltage";
+  | "voltage"
+  | "playful";
 
 export interface SiteConfig {
   businessName: string;

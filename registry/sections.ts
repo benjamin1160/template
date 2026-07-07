@@ -1,7 +1,7 @@
 import type { SectionInstance } from "../site.config.types";
 import type { DesignVibe, SectionDef, VariantDef } from "./types";
 
-export const REGISTRY_VERSION = "1.0.0";
+export const REGISTRY_VERSION = "1.1.0";
 
 /**
  * The classic hormozi order — exactly the section sequence app/page.tsx
@@ -26,6 +26,7 @@ export const VIBES: DesignVibe[] = [
   "crisp",
   "warm",
   "voltage",
+  "playful",
 ];
 
 const v = (def: Omit<VariantDef, "id">): VariantDef => ({
@@ -62,6 +63,51 @@ export const SECTIONS: SectionDef[] = [
         supportedVibes: "all",
         status: "stable",
         since: "1.0.0",
+      }),
+      v({
+        section: "hero",
+        variant: "split",
+        name: "Split hero",
+        description:
+          "Two-column hero: copy and CTAs left, large photo right. The image carries the first impression; falls back to a surface panel without one.",
+        useWhen: [
+          "a strong photo of real work, place, or people exists",
+          "local/trust registers where seeing the business sells it",
+        ],
+        avoidWhen: ["only generic stock imagery is available"],
+        requiredFields: ["headline", "subheadline", "ctaText", "ctaLink"],
+        optionalFields: [
+          "eyebrow",
+          "secondaryCtaText",
+          "secondaryCtaLink",
+          "trustBullets",
+          "backgroundImage",
+        ],
+        supportedVibes: "all",
+        status: "stable",
+        since: "1.1.0",
+      }),
+      v({
+        section: "hero",
+        variant: "editorial",
+        name: "Editorial hero",
+        description:
+          "Left-aligned, typography-led hero with a rule line, one primary CTA and a quiet text secondary. No badges, no glow — restraint reads as premium.",
+        useWhen: [
+          "premium or boutique positioning",
+          "editorial/minimal registers where big-badge energy would cheapen the brand",
+        ],
+        avoidWhen: ["urgency-driven offers that need maximum CTA pressure"],
+        requiredFields: ["headline", "subheadline", "ctaText", "ctaLink"],
+        optionalFields: [
+          "eyebrow",
+          "secondaryCtaText",
+          "secondaryCtaLink",
+          "trustBullets",
+        ],
+        supportedVibes: ["editorial", "crisp", "midnight", "warm"],
+        status: "stable",
+        since: "1.1.0",
       }),
     ],
   },
@@ -193,6 +239,23 @@ export const SECTIONS: SectionDef[] = [
         supportedVibes: "all",
         status: "stable",
         since: "1.0.0",
+      }),
+      v({
+        section: "socialProof",
+        variant: "spotlight",
+        name: "Spotlight testimonial",
+        description:
+          "One testimonial as an oversized centered pull quote, up to three more in a quiet row beneath. Proof with editorial restraint.",
+        useWhen: [
+          "one exceptional, specific testimonial deserves the stage",
+          "premium/editorial registers where a card wall feels busy",
+        ],
+        avoidWhen: ["volume of reviews is itself the proof point"],
+        requiredFields: ["testimonials"],
+        optionalFields: ["headline"],
+        supportedVibes: "all",
+        status: "stable",
+        since: "1.1.0",
       }),
     ],
   },
