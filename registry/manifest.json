@@ -1,0 +1,283 @@
+{
+  "registryVersion": "1.0.0",
+  "vibes": [
+    "midnight",
+    "editorial",
+    "crisp",
+    "warm",
+    "voltage"
+  ],
+  "defaultSectionPlan": [
+    {
+      "type": "hero"
+    },
+    {
+      "type": "bigNumbers"
+    },
+    {
+      "type": "pain"
+    },
+    {
+      "type": "plan"
+    },
+    {
+      "type": "valueStack"
+    },
+    {
+      "type": "guarantee"
+    },
+    {
+      "type": "socialProof"
+    },
+    {
+      "type": "faq"
+    }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "configKey": "hero",
+      "required": true,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "hero",
+          "variant": "classic",
+          "name": "Classic centered hero",
+          "description": "Centered eyebrow + display headline + subheadline with primary/secondary CTAs and trust bullets. Big-claim first, no photography required.",
+          "useWhen": [
+            "offer-led landing pages",
+            "no strong photography available",
+            "direct-response registers"
+          ],
+          "requiredFields": [
+            "headline",
+            "subheadline",
+            "ctaText",
+            "ctaLink"
+          ],
+          "optionalFields": [
+            "eyebrow",
+            "secondaryCtaText",
+            "secondaryCtaLink",
+            "trustBullets",
+            "backgroundImage"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "hero/classic"
+        }
+      ]
+    },
+    {
+      "type": "bigNumbers",
+      "configKey": "bigNumbers",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "bigNumbers",
+          "variant": "classic",
+          "name": "Stat strip",
+          "description": "Horizontal row of oversized proof numbers with labels, directly under the hero.",
+          "useWhen": [
+            "3-4 concrete numeric proof points exist"
+          ],
+          "avoidWhen": [
+            "stats are vague or unverifiable"
+          ],
+          "requiredFields": [
+            "stats"
+          ],
+          "optionalFields": [
+            "headline"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "bigNumbers/classic"
+        }
+      ]
+    },
+    {
+      "type": "pain",
+      "configKey": "pain",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "pain",
+          "variant": "classic",
+          "name": "Pain points list",
+          "description": "Problem-agitation section: headline plus a punchy list of the customer's pains.",
+          "useWhen": [
+            "the customer's problem is felt and nameable"
+          ],
+          "requiredFields": [
+            "headline",
+            "points"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "pain/classic"
+        }
+      ]
+    },
+    {
+      "type": "plan",
+      "configKey": "plan",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "plan",
+          "variant": "classic",
+          "name": "3-step plan",
+          "description": "StoryBrand process plan — exactly three verb-first steps with outcomes, making it look easy to start.",
+          "useWhen": [
+            "service businesses where 'how it works' reduces friction"
+          ],
+          "requiredFields": [
+            "headline",
+            "steps"
+          ],
+          "optionalFields": [
+            "subheadline",
+            "ctaText",
+            "ctaLink"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "plan/classic"
+        }
+      ]
+    },
+    {
+      "type": "valueStack",
+      "configKey": "valueStack",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "valueStack",
+          "variant": "classic",
+          "name": "Hormozi value stack",
+          "description": "Itemized offer with struck-through values, total anchor, price reveal and CTA.",
+          "useWhen": [
+            "a concrete offer with priceable components",
+            "direct-response landing pages"
+          ],
+          "avoidWhen": [
+            "premium brands where price anchoring feels cheap"
+          ],
+          "requiredFields": [
+            "headline",
+            "items",
+            "priceLabel",
+            "ctaText",
+            "ctaLink"
+          ],
+          "optionalFields": [
+            "subheadline",
+            "totalLabel",
+            "priceAmount"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "valueStack/classic"
+        }
+      ]
+    },
+    {
+      "type": "guarantee",
+      "configKey": "guarantee",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "guarantee",
+          "variant": "classic",
+          "name": "Guarantee badge",
+          "description": "Risk-reversal badge with headline and body copy stating the guarantee plainly.",
+          "useWhen": [
+            "a real, specific guarantee exists"
+          ],
+          "avoidWhen": [
+            "no genuine risk reversal to offer"
+          ],
+          "requiredFields": [
+            "badge",
+            "headline",
+            "body"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "guarantee/classic"
+        }
+      ]
+    },
+    {
+      "type": "socialProof",
+      "configKey": "socialProof",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "socialProof",
+          "variant": "classic",
+          "name": "Testimonial wall",
+          "description": "Masonry-style wall of testimonial cards with ratings, names and results.",
+          "useWhen": [
+            "3+ real testimonials with specifics"
+          ],
+          "avoidWhen": [
+            "fewer than 3 testimonials — sparse walls read as weak proof"
+          ],
+          "requiredFields": [
+            "testimonials"
+          ],
+          "optionalFields": [
+            "headline"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "socialProof/classic"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "configKey": "faq",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "faq",
+          "variant": "classic",
+          "name": "FAQ accordion",
+          "description": "Objection-handling FAQ list with expandable answers.",
+          "useWhen": [
+            "known objections that block conversion"
+          ],
+          "requiredFields": [
+            "items"
+          ],
+          "optionalFields": [
+            "headline"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "faq/classic"
+        }
+      ]
+    }
+  ],
+  "archetypes": []
+}
