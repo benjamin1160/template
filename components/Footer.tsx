@@ -40,8 +40,19 @@ export default function Footer({ config }: FooterProps) {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 py-16">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              <div className="text-xl font-black text-fg">
-                {config.businessName}
+              <div className="flex items-center gap-2.5">
+                {config.logo && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={config.logo}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-8 w-auto max-w-[120px] object-contain"
+                  />
+                )}
+                <div className="text-xl font-black text-fg">
+                  {config.businessName}
+                </div>
               </div>
               <p className="mt-3 text-sm text-muted max-w-sm">
                 {config.tagline}

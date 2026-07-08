@@ -11,7 +11,16 @@ export default function Header({ config }: HeaderProps) {
     <header className="sticky top-[36px] z-40 border-b border-border bg-bg/90 backdrop-blur supports-[backdrop-filter]:bg-bg/75">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2.5 min-w-0">
+            {config.logo && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={config.logo}
+                alt=""
+                aria-hidden="true"
+                className="h-9 w-auto max-w-[140px] object-contain flex-shrink-0"
+              />
+            )}
             <span className="text-lg sm:text-xl font-black tracking-tight text-fg truncate max-w-[180px] sm:max-w-none">
               {config.businessName}
             </span>
