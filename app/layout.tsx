@@ -1,8 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import type { CSSProperties } from "react";
-import { Inter, Fraunces, Manrope, Space_Grotesk } from "next/font/google";
+import {
+  Inter,
+  Fraunces,
+  Manrope,
+  Space_Grotesk,
+  Nunito,
+} from "next/font/google";
 import siteConfig from "@/site.config";
 import type { DesignVibe } from "@/site.config.types";
+import { validateSiteConfig } from "@/lib/validate-config";
 import UrgencyBar from "@/components/UrgencyBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -39,6 +46,13 @@ const grotesk = Space_Grotesk({
   display: "swap",
 });
 
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  weight: ["400", "600", "800"],
+  display: "swap",
+});
+
 /** Browser chrome color per vibe — must match each vibe's --bg. */
 const VIBE_META: Record<DesignVibe, { themeColor: string; dark: boolean }> = {
   midnight: { themeColor: "#0a0a0a", dark: true },
@@ -46,7 +60,12 @@ const VIBE_META: Record<DesignVibe, { themeColor: string; dark: boolean }> = {
   crisp: { themeColor: "#fafafa", dark: false },
   warm: { themeColor: "#fdf8f3", dark: false },
   voltage: { themeColor: "#09090b", dark: true },
+  playful: { themeColor: "#fffbeb", dark: false },
 };
+
+// Runs during `next build` static generation — an invalid config fails
+// the build with named paths instead of shipping a broken site.
+validateSiteConfig(siteConfig);
 
 const vibe: DesignVibe = siteConfig.design?.vibe ?? "midnight";
 const vibeMeta = VIBE_META[vibe] ?? VIBE_META.midnight;
@@ -98,7 +117,7 @@ export default function RootLayout({
       lang="en"
       data-vibe={vibe}
       style={accentOverride}
-      className={`${inter.variable} ${fraunces.variable} ${manrope.variable} ${grotesk.variable} h-full`}
+      className={`${inter.variable} ${fraunces.variable} ${manrope.variable} ${grotesk.variable} ${nunito.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-bg text-fg antialiased">
         <JsonLd config={siteConfig} />

@@ -13,6 +13,8 @@ import type { SiteConfig } from "@/site.config.types";
  */
 
 declare module "react" {
+  // Custom-element typing requires JSX namespace augmentation in React 19.
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
     interface IntrinsicElements {
       "chat-widget": React.DetailedHTMLProps<

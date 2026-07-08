@@ -103,6 +103,30 @@ export interface FinalCta {
 export type LandingRegister = "hormozi";
 
 /**
+ * Registry-addressable section types. Each maps to a SiteConfig slice
+ * (same name) and to one or more designed layout variants registered in
+ * registry/sections.ts.
+ */
+export type SectionType =
+  | "hero"
+  | "bigNumbers"
+  | "pain"
+  | "plan"
+  | "valueStack"
+  | "guarantee"
+  | "socialProof"
+  | "faq";
+
+/**
+ * One entry in the page's section plan. `variant` omitted → the
+ * registry's default variant for that section type.
+ */
+export interface SectionInstance {
+  type: SectionType;
+  variant?: string;
+}
+
+/**
  * Curated art directions. Each vibe sets the full token set — palette,
  * display/body fonts, radii, glow — in app/globals.css:
  *  - midnight  — ink black, heavy display sans, electric accent (default)
@@ -110,13 +134,15 @@ export type LandingRegister = "hormozi";
  *  - crisp     — cool off-white, tight geometric sans; professional services
  *  - warm      — cream + terracotta, soft serif, rounded; family businesses
  *  - voltage   — near-black, grotesk display, neon accent; max offer energy
+ *  - playful   — sunny cream, rounded sans, punchy accent; kids/pets/events
  */
 export type DesignVibe =
   | "midnight"
   | "editorial"
   | "crisp"
   | "warm"
-  | "voltage";
+  | "voltage"
+  | "playful";
 
 export interface SiteConfig {
   businessName: string;
@@ -148,9 +174,20 @@ export interface SiteConfig {
     vibe: DesignVibe;
     accent?: string;
     accentInk?: string;
+    /** Catalog archetype this site was generated from (provenance/QA). */
+    archetype?: string;
   };
 
   landingRegister: LandingRegister;
+
+  /**
+   * Ordered section plan for the landing page. Each entry selects a
+   * section type and (optionally) a registered layout variant; content
+   * still comes from the named config slices below. Omitted → the
+   * classic hormozi order (see DEFAULT_SECTIONS in app/page.tsx), so
+   * existing configs keep rendering unchanged.
+   */
+  sections?: SectionInstance[];
 
   /**
    * GoHighLevel sub-account binding. When present (populated by the

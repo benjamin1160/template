@@ -1,6 +1,6 @@
 import type { SiteConfig } from "@/site.config.types";
-import SectionHeading from "./SectionHeading";
-import CTAButton from "./CTAButton";
+import SectionHeading from "@/components/SectionHeading";
+import CTAButton from "@/components/CTAButton";
 
 /**
  * StoryBrand "process plan" — the 3 steps that make doing business

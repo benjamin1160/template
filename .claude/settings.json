@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -d node_modules/next ] || npm install --no-audit --no-fund"
+          }
+        ]
+      }
+    ]
+  }
+}

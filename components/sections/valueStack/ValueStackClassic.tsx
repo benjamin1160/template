@@ -1,5 +1,5 @@
 import type { SiteConfig } from "@/site.config.types";
-import CTAButton from "./CTAButton";
+import CTAButton from "@/components/CTAButton";
 import { currency, totalValue, suggestedPrice } from "@/lib/theme";
 
 interface ValueStackProps {

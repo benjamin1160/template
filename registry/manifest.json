@@ -1,0 +1,887 @@
+{
+  "registryVersion": "1.1.0",
+  "vibes": [
+    "midnight",
+    "editorial",
+    "crisp",
+    "warm",
+    "voltage",
+    "playful"
+  ],
+  "icons": [
+    "wrench",
+    "hammer",
+    "shield-check",
+    "clock",
+    "phone",
+    "map-pin",
+    "star",
+    "heart",
+    "home",
+    "truck",
+    "sparkles",
+    "leaf",
+    "sun",
+    "droplets",
+    "zap",
+    "thermometer",
+    "paw-print",
+    "utensils",
+    "scale",
+    "stethoscope",
+    "graduation-cap",
+    "car",
+    "camera",
+    "paintbrush",
+    "scissors",
+    "dumbbell",
+    "briefcase",
+    "calculator",
+    "key",
+    "trees"
+  ],
+  "defaultSectionPlan": [
+    {
+      "type": "hero"
+    },
+    {
+      "type": "bigNumbers"
+    },
+    {
+      "type": "pain"
+    },
+    {
+      "type": "plan"
+    },
+    {
+      "type": "valueStack"
+    },
+    {
+      "type": "guarantee"
+    },
+    {
+      "type": "socialProof"
+    },
+    {
+      "type": "faq"
+    }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "configKey": "hero",
+      "required": true,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "hero",
+          "variant": "classic",
+          "name": "Classic centered hero",
+          "description": "Centered eyebrow + display headline + subheadline with primary/secondary CTAs and trust bullets. Big-claim first, no photography required.",
+          "useWhen": [
+            "offer-led landing pages",
+            "no strong photography available",
+            "direct-response registers"
+          ],
+          "requiredFields": [
+            "headline",
+            "subheadline",
+            "ctaText",
+            "ctaLink"
+          ],
+          "optionalFields": [
+            "eyebrow",
+            "secondaryCtaText",
+            "secondaryCtaLink",
+            "trustBullets",
+            "backgroundImage"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "hero/classic"
+        },
+        {
+          "section": "hero",
+          "variant": "split",
+          "name": "Split hero",
+          "description": "Two-column hero: copy and CTAs left, large photo right. The image carries the first impression; falls back to a surface panel without one.",
+          "useWhen": [
+            "a strong photo of real work, place, or people exists",
+            "local/trust registers where seeing the business sells it"
+          ],
+          "avoidWhen": [
+            "only generic stock imagery is available"
+          ],
+          "requiredFields": [
+            "headline",
+            "subheadline",
+            "ctaText",
+            "ctaLink"
+          ],
+          "optionalFields": [
+            "eyebrow",
+            "secondaryCtaText",
+            "secondaryCtaLink",
+            "trustBullets",
+            "backgroundImage"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.1.0",
+          "id": "hero/split"
+        },
+        {
+          "section": "hero",
+          "variant": "editorial",
+          "name": "Editorial hero",
+          "description": "Left-aligned, typography-led hero with a rule line, one primary CTA and a quiet text secondary. No badges, no glow — restraint reads as premium.",
+          "useWhen": [
+            "premium or boutique positioning",
+            "editorial/minimal registers where big-badge energy would cheapen the brand"
+          ],
+          "avoidWhen": [
+            "urgency-driven offers that need maximum CTA pressure"
+          ],
+          "requiredFields": [
+            "headline",
+            "subheadline",
+            "ctaText",
+            "ctaLink"
+          ],
+          "optionalFields": [
+            "eyebrow",
+            "secondaryCtaText",
+            "secondaryCtaLink",
+            "trustBullets"
+          ],
+          "supportedVibes": [
+            "editorial",
+            "crisp",
+            "midnight",
+            "warm"
+          ],
+          "status": "stable",
+          "since": "1.1.0",
+          "id": "hero/editorial"
+        }
+      ]
+    },
+    {
+      "type": "bigNumbers",
+      "configKey": "bigNumbers",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "bigNumbers",
+          "variant": "classic",
+          "name": "Stat strip",
+          "description": "Horizontal row of oversized proof numbers with labels, directly under the hero.",
+          "useWhen": [
+            "3-4 concrete numeric proof points exist"
+          ],
+          "avoidWhen": [
+            "stats are vague or unverifiable"
+          ],
+          "requiredFields": [
+            "stats"
+          ],
+          "optionalFields": [
+            "headline"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "bigNumbers/classic"
+        }
+      ]
+    },
+    {
+      "type": "pain",
+      "configKey": "pain",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "pain",
+          "variant": "classic",
+          "name": "Pain points list",
+          "description": "Problem-agitation section: headline plus a punchy list of the customer's pains.",
+          "useWhen": [
+            "the customer's problem is felt and nameable"
+          ],
+          "requiredFields": [
+            "headline",
+            "points"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "pain/classic"
+        }
+      ]
+    },
+    {
+      "type": "plan",
+      "configKey": "plan",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "plan",
+          "variant": "classic",
+          "name": "3-step plan",
+          "description": "StoryBrand process plan — exactly three verb-first steps with outcomes, making it look easy to start.",
+          "useWhen": [
+            "service businesses where 'how it works' reduces friction"
+          ],
+          "requiredFields": [
+            "headline",
+            "steps"
+          ],
+          "optionalFields": [
+            "subheadline",
+            "ctaText",
+            "ctaLink"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "plan/classic"
+        }
+      ]
+    },
+    {
+      "type": "valueStack",
+      "configKey": "valueStack",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "valueStack",
+          "variant": "classic",
+          "name": "Hormozi value stack",
+          "description": "Itemized offer with struck-through values, total anchor, price reveal and CTA.",
+          "useWhen": [
+            "a concrete offer with priceable components",
+            "direct-response landing pages"
+          ],
+          "avoidWhen": [
+            "premium brands where price anchoring feels cheap"
+          ],
+          "requiredFields": [
+            "headline",
+            "items",
+            "priceLabel",
+            "ctaText",
+            "ctaLink"
+          ],
+          "optionalFields": [
+            "subheadline",
+            "totalLabel",
+            "priceAmount"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "valueStack/classic"
+        }
+      ]
+    },
+    {
+      "type": "guarantee",
+      "configKey": "guarantee",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "guarantee",
+          "variant": "classic",
+          "name": "Guarantee badge",
+          "description": "Risk-reversal badge with headline and body copy stating the guarantee plainly.",
+          "useWhen": [
+            "a real, specific guarantee exists"
+          ],
+          "avoidWhen": [
+            "no genuine risk reversal to offer"
+          ],
+          "requiredFields": [
+            "badge",
+            "headline",
+            "body"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "guarantee/classic"
+        }
+      ]
+    },
+    {
+      "type": "socialProof",
+      "configKey": "socialProof",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "socialProof",
+          "variant": "classic",
+          "name": "Testimonial wall",
+          "description": "Masonry-style wall of testimonial cards with ratings, names and results.",
+          "useWhen": [
+            "3+ real testimonials with specifics"
+          ],
+          "avoidWhen": [
+            "fewer than 3 testimonials — sparse walls read as weak proof"
+          ],
+          "requiredFields": [
+            "testimonials"
+          ],
+          "optionalFields": [
+            "headline"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "socialProof/classic"
+        },
+        {
+          "section": "socialProof",
+          "variant": "spotlight",
+          "name": "Spotlight testimonial",
+          "description": "One testimonial as an oversized centered pull quote, up to three more in a quiet row beneath. Proof with editorial restraint.",
+          "useWhen": [
+            "one exceptional, specific testimonial deserves the stage",
+            "premium/editorial registers where a card wall feels busy"
+          ],
+          "avoidWhen": [
+            "volume of reviews is itself the proof point"
+          ],
+          "requiredFields": [
+            "testimonials"
+          ],
+          "optionalFields": [
+            "headline"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.1.0",
+          "id": "socialProof/spotlight"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "configKey": "faq",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "faq",
+          "variant": "classic",
+          "name": "FAQ accordion",
+          "description": "Objection-handling FAQ list with expandable answers.",
+          "useWhen": [
+            "known objections that block conversion"
+          ],
+          "requiredFields": [
+            "items"
+          ],
+          "optionalFields": [
+            "headline"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.0.0",
+          "id": "faq/classic"
+        }
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "trust_institutional",
+      "version": "1.0.0",
+      "vibe": "crisp",
+      "fonts": {
+        "heading": "Manrope",
+        "body": "Inter"
+      },
+      "paletteLogic": "Cool off-white background, one confident blue accent used sparingly on CTAs and key figures. Whites stay clean, borders hairline. Brand color may replace the accent if it clears contrast floors.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split layout: precise claim with a number or credential left, professional photo of the team or premises right. Calm, not salesy.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "pain",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Measured authority: credentials, years, case counts. Plain sentences, no exclamation points, no urgency theatrics. Objections answered with facts.",
+      "referenceBrands": [
+        "Stripe",
+        "Vanguard",
+        "Mayo Clinic",
+        "Clio"
+      ],
+      "photographyRules": {
+        "requiredTone": "professional, natural light, real team and premises",
+        "reject": [
+          "corporate handshake stock",
+          "gavel/stethoscope clichés",
+          "abstract gradients"
+        ],
+        "minHeroResolution": [
+          2000,
+          1200
+        ]
+      },
+      "bannedDesign": [
+        "countdown timers",
+        "neon accents",
+        "strike-through price anchoring",
+        "emoji in headings",
+        "more than 2 fonts"
+      ],
+      "bannedCopyPatterns": [
+        "urgency scarcity claims",
+        "ALL-CAPS CTAs",
+        "exclamation points in headlines"
+      ],
+      "seo": {
+        "schemaOrg": "ProfessionalService",
+        "titleMaxChars": 60,
+        "descriptionShape": "credential + specific service + city — same promise as H1"
+      }
+    },
+    {
+      "id": "warm_local",
+      "version": "1.0.0",
+      "vibe": "warm",
+      "fonts": {
+        "heading": "Fraunces",
+        "body": "Inter"
+      },
+      "paletteLogic": "Cream background with one warm earth-tone accent (terracotta default; ochre/forest via brand override). Never pure black text, never pure white background — the warmth is the brand.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split layout led by a real photo of the work, place, or people — warm natural light, never abstract gradients. Overlay copy left-aligned.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "pain",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Neighborly and concrete: first names, town names, years in business. Warm but never saccharine; proof over promises.",
+      "referenceBrands": [
+        "Magnolia",
+        "Rejuvenation",
+        "Duluth Trading",
+        "Nickel & Suede"
+      ],
+      "photographyRules": {
+        "requiredTone": "warm, natural light, people and places doing real work",
+        "reject": [
+          "sterile studio stock",
+          "corporate handshakes",
+          "abstract textures"
+        ],
+        "minHeroResolution": [
+          2000,
+          1200
+        ]
+      },
+      "bannedDesign": [
+        "purple/blue gradients",
+        "glassmorphism",
+        "centered hero text",
+        "emoji in headings",
+        "more than 2 fonts",
+        "pure black text (#000)",
+        "pure white backgrounds (#fff)"
+      ],
+      "bannedCopyPatterns": [
+        "urgency countdown timers",
+        "scarcity claims without a real number",
+        "ALL-CAPS shouty CTAs"
+      ],
+      "seo": {
+        "schemaOrg": "LocalBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "specific promise + city — same promise as H1"
+      }
+    },
+    {
+      "id": "bold_conversion",
+      "version": "1.0.0",
+      "vibe": "voltage",
+      "fonts": {
+        "heading": "Space Grotesk",
+        "body": "Inter"
+      },
+      "paletteLogic": "Near-black background, exactly one neon accent reserved for CTAs and key numbers. High contrast everywhere; the accent must never be diluted across decorative elements.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Centered big-claim hero: number or guarantee in the first seven words, CTA above the fold, trust bullets under it. No photography required.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "classic"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "pain",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "valueStack",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Hormozi direct-response: specific numbers, timeframes, risk reversal, verb-first CTAs. Every claim gets a proof point in the same section.",
+      "referenceBrands": [
+        "Gong",
+        "Ramp",
+        "ClickFunnels-era energy done tastefully"
+      ],
+      "photographyRules": {
+        "requiredTone": "high-contrast, punchy results imagery when used at all",
+        "reject": [
+          "soft lifestyle stock",
+          "washed-out filters"
+        ],
+        "minHeroResolution": [
+          1600,
+          1000
+        ]
+      },
+      "bannedDesign": [
+        "glassmorphism",
+        "purple/blue gradients",
+        "more than one accent color",
+        "serif display type"
+      ],
+      "bannedCopyPatterns": [
+        "fake countdown timers",
+        "scarcity without a real number",
+        "vague superlatives without proof"
+      ],
+      "seo": {
+        "schemaOrg": "LocalBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "offer + guarantee + city — same promise as H1"
+      }
+    },
+    {
+      "id": "editorial_minimal",
+      "version": "1.0.0",
+      "vibe": "editorial",
+      "fonts": {
+        "heading": "Fraunces",
+        "body": "Inter"
+      },
+      "paletteLogic": "Warm paper background, near-black ink, one burnt-sienna accent used almost exclusively on the primary CTA. Whitespace is the main design material.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Typography-led editorial hero: oversized serif headline, rule line, single CTA. No badges, no glow, no background imagery.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "editorial"
+        },
+        {
+          "type": "pain",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "spotlight"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Confident understatement: short declarative sentences, specific outcomes, zero hype. Reads like a well-edited magazine, not an ad.",
+      "referenceBrands": [
+        "Aesop",
+        "Kinfolk",
+        "Basecamp",
+        "Area 17"
+      ],
+      "photographyRules": {
+        "requiredTone": "muted, considered, editorial — or none at all",
+        "reject": [
+          "busy collages",
+          "saturated stock",
+          "clip-art iconography"
+        ],
+        "minHeroResolution": [
+          2000,
+          1200
+        ]
+      },
+      "bannedDesign": [
+        "strike-through price anchoring",
+        "urgency bars",
+        "neon accents",
+        "card walls",
+        "more than 2 fonts"
+      ],
+      "bannedCopyPatterns": [
+        "urgency countdown timers",
+        "exclamation points",
+        "ALL-CAPS CTAs",
+        "superlatives without proof"
+      ],
+      "seo": {
+        "schemaOrg": "ProfessionalService",
+        "titleMaxChars": 60,
+        "descriptionShape": "quiet specific promise + niche — same promise as H1"
+      }
+    },
+    {
+      "id": "playful_energetic",
+      "version": "1.0.0",
+      "vibe": "playful",
+      "fonts": {
+        "heading": "Nunito",
+        "body": "Nunito"
+      },
+      "paletteLogic": "Sunny cream background, one punchy pink/coral accent, fully rounded corners. Bright but never chaotic — one accent, generous whitespace, big friendly type.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Centered, friendly hero: warm claim up top, rounded CTA, playful photo of kids/pets/events if available. Energy from color and rounding, not clutter.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "classic"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Upbeat, second-person, plain words a parent skims on a phone. Fun tone, concrete facts: prices, times, ages, safety credentials.",
+      "referenceBrands": [
+        "Chuck E. Cheese done modern",
+        "BarkBox",
+        "Headspace",
+        "Duolingo"
+      ],
+      "photographyRules": {
+        "requiredTone": "bright, candid, joyful — real kids, pets, events",
+        "reject": [
+          "posed studio stock",
+          "moody lighting",
+          "corporate settings"
+        ],
+        "minHeroResolution": [
+          1600,
+          1000
+        ]
+      },
+      "bannedDesign": [
+        "dark backgrounds",
+        "sharp corners",
+        "thin gray typography",
+        "strike-through price anchoring"
+      ],
+      "bannedCopyPatterns": [
+        "fear-based selling",
+        "urgency countdown timers",
+        "jargon of any kind"
+      ],
+      "seo": {
+        "schemaOrg": "LocalBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "fun specific promise + city — same promise as H1"
+      }
+    },
+    {
+      "id": "premium_dark",
+      "version": "1.0.0",
+      "vibe": "midnight",
+      "fonts": {
+        "heading": "Inter",
+        "body": "Inter"
+      },
+      "paletteLogic": "Ink-black surfaces with a single metallic or electric accent (brand override encouraged: gold, champagne, ice blue). No pure white anywhere — off-whites only. Darkness reads as expensive only when contrast is disciplined.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split hero: restrained claim left, dramatic low-light photography of the product/work right. The photo does the selling.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "spotlight"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Spare and assured: fewer words, heavier nouns. Price is not defended, it's implied. Specific materials, marques, and timelines carry the persuasion.",
+      "referenceBrands": [
+        "Porsche",
+        "Rimowa",
+        "Aman Resorts",
+        "Bang & Olufsen"
+      ],
+      "photographyRules": {
+        "requiredTone": "dramatic, low-key lighting, detail shots of craft and finish",
+        "reject": [
+          "bright flat lighting",
+          "busy backgrounds",
+          "watermarked stock"
+        ],
+        "minHeroResolution": [
+          2400,
+          1400
+        ]
+      },
+      "bannedDesign": [
+        "pure white anywhere",
+        "strike-through price anchoring",
+        "urgency bars",
+        "emoji anywhere",
+        "rounded-pill buttons"
+      ],
+      "bannedCopyPatterns": [
+        "discount language",
+        "urgency scarcity claims",
+        "exclamation points"
+      ],
+      "seo": {
+        "schemaOrg": "LocalBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "marque-level promise + specialty + city — same promise as H1"
+      }
+    }
+  ]
+}

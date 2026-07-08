@@ -166,6 +166,35 @@
   --glow: 16%;
 }
 
+/* ── playful — sunny cream, rounded sans, punchy pink accent. For
+      kids' services, pets, events, entertainment. ─────────────────── */
+[data-vibe="playful"] {
+  --scheme: light;
+  --bg: #fffbeb;
+  --surface: #ffffff;
+  --surface-2: #fef3c7;
+  --fg: #292524;
+  --muted: #57534e;
+  --muted-2: #78716c;
+  --border: #f2e4bb;
+  --border-strong: #e3d093;
+  --accent: #db2777;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, black);
+  --accent-ink: #ffffff;
+  --danger: #dc2626;
+  --success: #16a34a;
+
+  --font-display-stack: var(--font-nunito), system-ui, sans-serif;
+  --font-body-stack: var(--font-nunito), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.02em;
+  --display-leading: 1;
+
+  --radius-btn: 999px;
+  --radius-card: 1.5rem;
+  --glow: 8%;
+}
+
 :root {
   color-scheme: var(--scheme);
 }
