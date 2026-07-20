@@ -1,7 +1,7 @@
 import type { SectionInstance } from "../site.config.types";
 import type { DesignVibe, SectionDef, VariantDef } from "./types";
 
-export const REGISTRY_VERSION = "1.1.0";
+export const REGISTRY_VERSION = "1.2.0";
 
 /**
  * The classic hormozi order — exactly the section sequence app/page.tsx
@@ -27,6 +27,15 @@ export const VIBES: DesignVibe[] = [
   "warm",
   "voltage",
   "playful",
+  "meadow",
+  "sparkle",
+  "homestead",
+  "showroom",
+  "garage",
+  "craftsman",
+  "grove",
+  "shield",
+  "precision",
 ];
 
 const v = (def: Omit<VariantDef, "id">): VariantDef => ({

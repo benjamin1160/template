@@ -54,7 +54,16 @@ export interface ArchetypeDef {
     | "bold_conversion"
     | "editorial_minimal"
     | "playful_energetic"
-    | "premium_dark";
+    | "premium_dark"
+    | "fresh_organic"
+    | "bright_service"
+    | "trusted_home"
+    | "showroom_premium"
+    | "neighborhood_garage"
+    | "sturdy_craftsman"
+    | "organic_editorial"
+    | "rapid_shield"
+    | "modern_precision";
   version: string;
   vibe: DesignVibe;
   /** Constrained to fonts the vibe actually loads in app/layout.tsx. */

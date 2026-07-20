@@ -135,6 +135,15 @@ export interface SectionInstance {
  *  - warm      — cream + terracotta, soft serif, rounded; family businesses
  *  - voltage   — near-black, grotesk display, neon accent; max offer energy
  *  - playful   — sunny cream, rounded sans, punchy accent; kids/pets/events
+ *  - meadow    — warm cream + forest green; landscaping/lawn care
+ *  - sparkle   — bright off-white + vivid blue; cleaning services
+ *  - homestead — white + teal-tinted surfaces + orange; general home services
+ *  - showroom  — deep navy-black, ice-blue accent; premium auto detailing
+ *  - garage    — warm cream + signal red, pill shapes; friendly repair shops
+ *  - craftsman — cream + espresso ink + terracotta; roofing/contractors
+ *  - grove     — near-black, condensed serif, mint accent; premium landscape design
+ *  - shield    — white + acid-yellow CTA energy; pest control/24-7 response
+ *  - precision — cool white + navy pills, medium-weight grotesk; garage doors/installers
  */
 export type DesignVibe =
   | "midnight"
@@ -142,7 +151,16 @@ export type DesignVibe =
   | "crisp"
   | "warm"
   | "voltage"
-  | "playful";
+  | "playful"
+  | "meadow"
+  | "sparkle"
+  | "homestead"
+  | "showroom"
+  | "garage"
+  | "craftsman"
+  | "grove"
+  | "shield"
+  | "precision";
 
 export interface SiteConfig {
   businessName: string;

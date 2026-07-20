@@ -195,6 +195,263 @@
   --glow: 8%;
 }
 
+/* ── meadow — warm cream, forest-green accent, clean sans. Fresh and
+      organic: landscaping, gardening, lawn care. ──────────────────── */
+[data-vibe="meadow"] {
+  --scheme: light;
+  --bg: #f2f1e7;
+  --surface: #ffffff;
+  --surface-2: #f1efd9;
+  --fg: #1f1f1f;
+  --muted: #5a5a52;
+  --muted-2: #7a7a70;
+  --border: #e2e0cf;
+  --border-strong: #cbc9b2;
+  --accent: #2f5d46;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, black);
+  --accent-ink: #ffffff;
+  --danger: #c02626;
+  --success: #3a7d2c;
+
+  --font-display-stack: var(--font-inter), system-ui, sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.035em;
+  --display-leading: 0.98;
+
+  --radius-btn: 0.5rem;
+  --radius-card: 0.75rem;
+  --glow: 0%;
+}
+
+/* ── sparkle — bright off-white, vivid blue accent, tidy grotesk.
+      Energetic and spotless: cleaning services, maid services. ────── */
+[data-vibe="sparkle"] {
+  --scheme: light;
+  --bg: #f7f7f2;
+  --surface: #ffffff;
+  --surface-2: #eef1fb;
+  --fg: #0c1210;
+  --muted: #676565;
+  --muted-2: #8a8783;
+  --border: #e5e5dd;
+  --border-strong: #cfcfc4;
+  --accent: #1f3bf6;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, black);
+  --danger: #dc2626;
+  --success: #16a34a;
+  --accent-ink: #ffffff;
+
+  --font-display-stack: var(--font-instrument), system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.03em;
+  --display-leading: 0.98;
+
+  --radius-btn: 0.75rem;
+  --radius-card: 1rem;
+  --glow: 0%;
+}
+
+/* ── homestead — white, teal-tinted surfaces, sturdy orange accent,
+      pill buttons. Corporate-friendly trust: general home services. ── */
+[data-vibe="homestead"] {
+  --scheme: light;
+  --bg: #ffffff;
+  --surface: #f2f2f2;
+  --surface-2: #e8efec;
+  --fg: #0d0d0d;
+  --muted: #525254;
+  --muted-2: #78787c;
+  --border: #e6e6e6;
+  --border-strong: #cecece;
+  --accent: #f3752b;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, black);
+  --accent-ink: #ffffff;
+  --danger: #dc2626;
+  --success: #219653;
+
+  --font-display-stack: var(--font-outfit), system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.03em;
+  --display-leading: 0.98;
+
+  --radius-btn: 999px;
+  --radius-card: 1rem;
+  --glow: 0%;
+}
+
+/* ── showroom — deep navy-black, ice-blue accent, heavy grotesk,
+      generous rounding. Cinematic premium: auto detailing, car wash. ── */
+[data-vibe="showroom"] {
+  --scheme: dark;
+  --bg: #05111e;
+  --surface: #0a1a2c;
+  --surface-2: #102338;
+  --fg: #f5f7fa;
+  --muted: #8fa0b5;
+  --muted-2: #64778f;
+  --border: #1b2c40;
+  --border-strong: #2c415c;
+  --accent: #d7e3f7;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, white);
+  --accent-ink: #05111e;
+  --danger: #ff453a;
+  --success: #30d158;
+
+  --font-display-stack: var(--font-hanken), system-ui, sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.045em;
+  --display-leading: 0.94;
+
+  --radius-btn: 999px;
+  --radius-card: 1.75rem;
+  --glow: 8%;
+}
+
+/* ── garage — warm cream, signal-red accent, friendly grotesk, pill
+      shapes. Neighborly trades: auto/bike repair, small workshops. ── */
+[data-vibe="garage"] {
+  --scheme: light;
+  --bg: #f6f5f0;
+  --surface: #ffffff;
+  --surface-2: #ededea;
+  --fg: #191919;
+  --muted: #5b5955;
+  --muted-2: #7d7a74;
+  --border: #e3e1da;
+  --border-strong: #cfccc2;
+  --accent: #e3000b;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, black);
+  --accent-ink: #ffffff;
+  --danger: #b91c1c;
+  --success: #16a34a;
+
+  --font-display-stack: var(--font-hanken), system-ui, sans-serif;
+  --font-body-stack: var(--font-hanken), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.03em;
+  --display-leading: 0.98;
+
+  --radius-btn: 999px;
+  --radius-card: 1.25rem;
+  --glow: 0%;
+}
+
+/* ── craftsman — cream/eggshell, espresso ink, terracotta accent,
+      squared corners. Earthy trade trust: roofing, contractors. ───── */
+[data-vibe="craftsman"] {
+  --scheme: light;
+  --bg: #f7f7ec;
+  --surface: #fcfcfb;
+  --surface-2: #f6f0e4;
+  --fg: #2a200f;
+  --muted: #5f5744;
+  --muted-2: #7d7561;
+  --border: #e8e4d2;
+  --border-strong: #d3ccb2;
+  --accent: #dd4e0a;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, black);
+  --accent-ink: #ffffff;
+  --danger: #b91c1c;
+  --success: #3f7d20;
+
+  --font-display-stack: var(--font-jakarta), system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.035em;
+  --display-leading: 0.96;
+
+  --radius-btn: 0.5rem;
+  --radius-card: 0.5rem;
+  --glow: 0%;
+}
+
+/* ── grove — near-black, condensed display serif, mint accent with
+      deep-teal ink. Moody editorial: premium landscape/garden design. ── */
+[data-vibe="grove"] {
+  --scheme: dark;
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --surface-2: #212121;
+  --fg: #fafafa;
+  --muted: #a3a3a3;
+  --muted-2: #737373;
+  --border: #2a2a2a;
+  --border-strong: #404040;
+  --accent: #a9ffca;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, white);
+  --accent-ink: #033040;
+  --danger: #ff453a;
+  --success: #22c55e;
+
+  --font-display-stack: var(--font-caslon), Georgia, serif;
+  --display-weight: 400;
+  --display-tracking: -0.01em;
+  --display-leading: 0.96;
+
+  --radius-btn: 0.75rem;
+  --radius-card: 0.75rem;
+  --glow: 6%;
+}
+
+/* ── shield — clean white, acid-yellow CTA with near-black ink,
+      geometric-humanist sans. Reassuring urgency: pest control, 24/7
+      emergency services. ─────────────────────────────────────────── */
+[data-vibe="shield"] {
+  --scheme: light;
+  --bg: #ffffff;
+  --surface: #f7f7f7;
+  --surface-2: #f0f0ee;
+  --fg: #1e1e1e;
+  --muted: #555555;
+  --muted-2: #8a8a8a;
+  --border: #e1e1e1;
+  --border-strong: #cccccc;
+  --accent: #6f6b00;
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, black);
+  --accent-ink: #ffffff;
+  --danger: #dc2626;
+  --success: #16a34a;
+
+  --font-display-stack: var(--font-manrope), system-ui, sans-serif;
+  --font-body-stack: var(--font-manrope), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display-weight: 600;
+  --display-tracking: -0.035em;
+  --display-leading: 1;
+
+  --radius-btn: 1.25rem;
+  --radius-card: 1.5rem;
+  --glow: 0%;
+}
+
+/* ── precision — cool white, navy accent, medium-weight tight grotesk,
+      navy pill CTAs. Quietly premium manufacturer: garage doors,
+      shading, installed home products. ───────────────────────────── */
+[data-vibe="precision"] {
+  --scheme: light;
+  --bg: #ffffff;
+  --surface: #f7f8fa;
+  --surface-2: #eef0f6;
+  --fg: #202430;
+  --muted: #5c6270;
+  --muted-2: #868c99;
+  --border: #e6e8ee;
+  --border-strong: #cdd2dd;
+  --accent: #1c274c;
+  --accent-hover: color-mix(in srgb, var(--accent) 80%, black);
+  --accent-ink: #ffffff;
+  --danger: #cc1212;
+  --success: #16a34a;
+
+  --font-display-stack: var(--font-outfit), system-ui, sans-serif;
+  --font-body-stack: var(--font-outfit), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display-weight: 500;
+  --display-tracking: -0.035em;
+  --display-leading: 1;
+
+  --radius-btn: 999px;
+  --radius-card: 1rem;
+  --glow: 0%;
+}
+
 :root {
   color-scheme: var(--scheme);
 }

@@ -13,7 +13,7 @@ The site skeleton for a website factory. The mission: an operator types a busine
 Design is data, chosen from a **component registry + design catalog**:
 
 - `registry/sections.ts` — every section type and its layout **variants**, with use-when metadata and required-field contracts
-- `registry/archetypes/` — six whole-site design recipes (vibe + fonts + ordered section plan + copy register + banned lists)
+- `registry/archetypes/` — fifteen whole-site design recipes (vibe + fonts + ordered section plan + copy register + banned lists)
 - `registry/manifest.json` — the machine-readable artifact the factory consumes; **regenerate with `npm run registry:build` after any registry change**
 - `app/globals.css` — the vibes: CSS-token art directions selected via `data-vibe`
 - `lib/section-map.ts` — variant id → component (static imports only)

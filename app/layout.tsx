@@ -6,6 +6,11 @@ import {
   Manrope,
   Space_Grotesk,
   Nunito,
+  Instrument_Sans,
+  Hanken_Grotesk,
+  Plus_Jakarta_Sans,
+  Libre_Caslon_Display,
+  Outfit,
 } from "next/font/google";
 import siteConfig from "@/site.config";
 import type { DesignVibe } from "@/site.config.types";
@@ -53,6 +58,48 @@ const nunito = Nunito({
   display: "swap",
 });
 
+// Vibe-specific families: preload disabled so a generated site only
+// downloads the families its active vibe's font stacks reference.
+const instrument = Instrument_Sans({
+  variable: "--font-instrument",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  preload: false,
+});
+
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+  display: "swap",
+  preload: false,
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
+  subsets: ["latin"],
+  weight: ["500", "700", "800"],
+  display: "swap",
+  preload: false,
+});
+
+const caslon = Libre_Caslon_Display({
+  variable: "--font-caslon",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  preload: false,
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  preload: false,
+});
+
 /** Browser chrome color per vibe — must match each vibe's --bg. */
 const VIBE_META: Record<DesignVibe, { themeColor: string; dark: boolean }> = {
   midnight: { themeColor: "#0a0a0a", dark: true },
@@ -61,6 +108,15 @@ const VIBE_META: Record<DesignVibe, { themeColor: string; dark: boolean }> = {
   warm: { themeColor: "#fdf8f3", dark: false },
   voltage: { themeColor: "#09090b", dark: true },
   playful: { themeColor: "#fffbeb", dark: false },
+  meadow: { themeColor: "#f2f1e7", dark: false },
+  sparkle: { themeColor: "#f7f7f2", dark: false },
+  homestead: { themeColor: "#ffffff", dark: false },
+  showroom: { themeColor: "#05111e", dark: true },
+  garage: { themeColor: "#f6f5f0", dark: false },
+  craftsman: { themeColor: "#f7f7ec", dark: false },
+  grove: { themeColor: "#121212", dark: true },
+  shield: { themeColor: "#ffffff", dark: false },
+  precision: { themeColor: "#ffffff", dark: false },
 };
 
 // Runs during `next build` static generation — an invalid config fails
@@ -117,7 +173,7 @@ export default function RootLayout({
       lang="en"
       data-vibe={vibe}
       style={accentOverride}
-      className={`${inter.variable} ${fraunces.variable} ${manrope.variable} ${grotesk.variable} ${nunito.variable} h-full`}
+      className={`${inter.variable} ${fraunces.variable} ${manrope.variable} ${grotesk.variable} ${nunito.variable} ${instrument.variable} ${hanken.variable} ${jakarta.variable} ${caslon.variable} ${outfit.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-bg text-fg antialiased">
         <JsonLd config={siteConfig} />

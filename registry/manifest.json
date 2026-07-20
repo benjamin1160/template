@@ -1,12 +1,21 @@
 {
-  "registryVersion": "1.1.0",
+  "registryVersion": "1.2.0",
   "vibes": [
     "midnight",
     "editorial",
     "crisp",
     "warm",
     "voltage",
-    "playful"
+    "playful",
+    "meadow",
+    "sparkle",
+    "homestead",
+    "showroom",
+    "garage",
+    "craftsman",
+    "grove",
+    "shield",
+    "precision"
   ],
   "icons": [
     "wrench",
@@ -881,6 +890,701 @@
         "schemaOrg": "LocalBusiness",
         "titleMaxChars": 60,
         "descriptionShape": "marque-level promise + specialty + city — same promise as H1"
+      }
+    },
+    {
+      "id": "fresh_organic",
+      "version": "1.0.0",
+      "vibe": "meadow",
+      "fonts": {
+        "heading": "Inter",
+        "body": "Inter"
+      },
+      "paletteLogic": "Warm cream base with alternating cream tones between sections, white cards, one deep forest-green accent. Brand override may swap the accent for a lime/chartreuse punch (dark ink) when the business's branding is brighter. Greens must read natural, never neon.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split hero led by a real job-site photo — a crew actively working (trimming, planting, mowing), lush saturated greens. Copy left, free-quote CTA prominent.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Warm and benefit-led with an eco-conscious thread: outdoor transformation, seasonal care, free quotes. Concrete services and plant/lawn specifics over vague beauty talk.",
+      "referenceBrands": [
+        "Greenly (Framer template)",
+        "TruGreen done boutique",
+        "local garden-center warmth"
+      ],
+      "photographyRules": {
+        "requiredTone": "bright natural daylight, uniformed crews actively working outdoors, lush greens",
+        "reject": [
+          "sterile studio stock",
+          "obviously staged handshake shots",
+          "wilted or dormant landscaping"
+        ],
+        "minHeroResolution": [
+          2000,
+          1200
+        ]
+      },
+      "bannedDesign": [
+        "dark backgrounds",
+        "neon accents",
+        "glassmorphism",
+        "sharp 0-radius corners",
+        "more than 2 fonts"
+      ],
+      "bannedCopyPatterns": [
+        "urgency countdown timers",
+        "ALL-CAPS shouty CTAs",
+        "eco claims without a specific practice behind them"
+      ],
+      "seo": {
+        "schemaOrg": "LocalBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "outdoor-transformation promise + service area — same promise as H1"
+      }
+    },
+    {
+      "id": "bright_service",
+      "version": "1.0.0",
+      "vibe": "sparkle",
+      "fonts": {
+        "heading": "Instrument Sans",
+        "body": "Inter"
+      },
+      "paletteLogic": "Bright off-white base, white cards, one vivid blue accent carrying CTAs and links. Everything must feel freshly wiped: high brightness, no murky tones. Brand override may substitute the business's primary color if it stays saturated and clean.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split hero with a bright lifestyle photo of cleaners at work — color-popping props, smiling staff. Headline names the city; phone-call CTA beside the booking CTA.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "pain",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Friendly and direct with heavy trust math: real review counts, star ratings, homes served, satisfaction percentages. Local-SEO city naming in headline and description. Phone-first conversion.",
+      "referenceBrands": [
+        "FlowFix (Framer template)",
+        "Molly Maid modernized",
+        "Handy's clarity"
+      ],
+      "photographyRules": {
+        "requiredTone": "bright, high-key lifestyle shots of cleaners working — colorful gloves and props welcome",
+        "reject": [
+          "dim moody lighting",
+          "empty sterile rooms with no people",
+          "grime close-ups"
+        ],
+        "minHeroResolution": [
+          1600,
+          1000
+        ]
+      },
+      "bannedDesign": [
+        "dark backgrounds",
+        "serif display type",
+        "glassmorphism",
+        "muted desaturated palettes"
+      ],
+      "bannedCopyPatterns": [
+        "fake review counts or ratings",
+        "scarcity claims without a real number",
+        "germ fear-mongering"
+      ],
+      "seo": {
+        "schemaOrg": "LocalBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "service + city + trust number — same promise as H1"
+      }
+    },
+    {
+      "id": "trusted_home",
+      "version": "1.0.0",
+      "vibe": "homestead",
+      "fonts": {
+        "heading": "Outfit",
+        "body": "Inter"
+      },
+      "paletteLogic": "White base with soft gray and teal-tinted surfaces, one sturdy accent (orange default). The accent is deliberately swappable per trade — plumbing blue, lawn green, roofing red — via brand override; the neutral system stays constant.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split hero: 'trusted partner' headline with dual CTAs (request service + secondary), photo of uniformed workers adjacent. People-first imagery over job-site texture.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Formal-friendly corporate trust: transparency, professionalism, values-led rather than offer-led. Years in business, service-area count, satisfaction ratings carry the proof.",
+      "referenceBrands": [
+        "HomeMaster (Framer template)",
+        "Mr. Handyman",
+        "Neighborly-brand polish"
+      ],
+      "photographyRules": {
+        "requiredTone": "clean portraits of smiling uniformed tradespeople; bright, people-first",
+        "reject": [
+          "messy job sites",
+          "dark dramatic lighting",
+          "generic office stock"
+        ],
+        "minHeroResolution": [
+          1600,
+          1000
+        ]
+      },
+      "bannedDesign": [
+        "dark page backgrounds",
+        "neon accents",
+        "serif display type",
+        "sharp 0-radius buttons"
+      ],
+      "bannedCopyPatterns": [
+        "urgency countdown timers",
+        "discount-led headlines",
+        "vague 'best in town' superlatives without proof"
+      ],
+      "seo": {
+        "schemaOrg": "LocalBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "trusted-partner promise + trade + service area — same promise as H1"
+      }
+    },
+    {
+      "id": "showroom_premium",
+      "version": "1.0.0",
+      "vibe": "showroom",
+      "fonts": {
+        "heading": "Hanken Grotesk",
+        "body": "Inter"
+      },
+      "paletteLogic": "Deep midnight-navy surfaces with off-white type and a restrained ice-blue accent. No loud saturated accent — the restraint is the premium signal. Alternate dark panels with light imagery for cinematic contrast.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split hero: heavy oversized claim left, one hero vehicle right — dramatic studio-quality shot, ideally the same car appearing before/after across the page. The car is the protagonist.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "valueStack",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "spotlight"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Enthusiast-premium: speaks to people who love their cars. Named packages with real prices, testimonials that name the car. A single flash of playfulness in package naming is allowed; everywhere else, restraint.",
+      "referenceBrands": [
+        "Car Wash & Detailing (Framer template)",
+        "Chemical Guys' enthusiasm, Porsche's restraint",
+        "detail-studio Instagram aesthetics"
+      ],
+      "photographyRules": {
+        "requiredTone": "studio-quality automotive shots, consistent hero vehicle, gloss and reflection detail",
+        "reject": [
+          "gas-station-wash snapshots",
+          "cluttered parking-lot backgrounds",
+          "flat bright lighting that kills reflections"
+        ],
+        "minHeroResolution": [
+          2400,
+          1400
+        ]
+      },
+      "bannedDesign": [
+        "more than one accent color",
+        "purple/blue gradients",
+        "urgency bars",
+        "emoji anywhere",
+        "busy badge clusters"
+      ],
+      "bannedCopyPatterns": [
+        "discount-led headlines",
+        "fake countdown timers",
+        "fleet/commercial jargon aimed at enthusiasts"
+      ],
+      "seo": {
+        "schemaOrg": "AutoWash",
+        "titleMaxChars": 60,
+        "descriptionShape": "premium detailing promise + city — same promise as H1"
+      }
+    },
+    {
+      "id": "neighborhood_garage",
+      "version": "1.0.0",
+      "vibe": "garage",
+      "fonts": {
+        "heading": "Hanken Grotesk",
+        "body": "Hanken Grotesk"
+      },
+      "paletteLogic": "Warm cream base, white cards, one signal-red accent for CTAs and highlights. Classic automotive red on a soft neighborly background — never industrial black or aggressive chrome.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split hero: 'your local workshop' headline with the phone number as the primary CTA and a star-rating/customer-count badge, real workshop photo right.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Friendly-neighborly and honest-local: 'your local', 'honest advice', 'stress-free'. Phone-first conversion repeated top and bottom. Testimonials describe specific repairs, not vague praise.",
+      "referenceBrands": [
+        "Motix (Framer template)",
+        "the trusted corner garage",
+        "Christian Brothers Automotive warmth"
+      ],
+      "photographyRules": {
+        "requiredTone": "real workshop photography — mechanics at work, service bays, honest before/after repairs",
+        "reject": [
+          "showroom gloss",
+          "stock models in clean coveralls",
+          "abstract gear imagery"
+        ],
+        "minHeroResolution": [
+          1600,
+          1000
+        ]
+      },
+      "bannedDesign": [
+        "dark industrial backgrounds",
+        "neon accents",
+        "serif display type",
+        "sharp 0-radius corners"
+      ],
+      "bannedCopyPatterns": [
+        "urgency countdown timers",
+        "scare-tactic repair warnings",
+        "jargon-heavy diagnostics talk without plain-language translation"
+      ],
+      "seo": {
+        "schemaOrg": "AutoRepair",
+        "titleMaxChars": 60,
+        "descriptionShape": "local repair promise + neighborhood/city — same promise as H1"
+      }
+    },
+    {
+      "id": "sturdy_craftsman",
+      "version": "1.0.0",
+      "vibe": "craftsman",
+      "fonts": {
+        "heading": "Plus Jakarta Sans",
+        "body": "Inter"
+      },
+      "paletteLogic": "Cream/eggshell base with deep espresso-brown ink instead of black, terracotta accent on CTAs. Reads 'shingle brown + terracotta on cream' — an earthy trade palette. Dark espresso bands may bookend the page.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Full-bleed job-site photo background with dark overlay, oversized display headline in white, single call CTA. Protection and peace-of-mind framing in the first line.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "classic"
+        },
+        {
+          "type": "pain",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Professional trust-builder, benefit-led and mildly protective: secure, protect, guaranteed. Numbered process steps, years-of-expertise stats, phone-call conversion path. Testimonials carry names and dates.",
+      "referenceBrands": [
+        "Roofivo (Framer template)",
+        "GAF Master Elite contractor pages",
+        "regional roofer done premium"
+      ],
+      "photographyRules": {
+        "requiredTone": "real job-site photography — crews on roofs, material close-ups, finished homes",
+        "reject": [
+          "renderings passed off as photos",
+          "drone shots with no crew",
+          "clip-art houses"
+        ],
+        "minHeroResolution": [
+          2000,
+          1200
+        ]
+      },
+      "bannedDesign": [
+        "neon accents",
+        "pure black text (#000)",
+        "glassmorphism",
+        "rounded-pill cards"
+      ],
+      "bannedCopyPatterns": [
+        "storm-chaser urgency ('act before the next storm!')",
+        "fake countdown timers",
+        "guarantees without stated terms"
+      ],
+      "seo": {
+        "schemaOrg": "RoofingContractor",
+        "titleMaxChars": 60,
+        "descriptionShape": "protection promise + trade + city — same promise as H1"
+      }
+    },
+    {
+      "id": "organic_editorial",
+      "version": "1.0.0",
+      "vibe": "grove",
+      "fonts": {
+        "heading": "Libre Caslon Display",
+        "body": "Inter"
+      },
+      "paletteLogic": "Near-black surfaces with white type and a mint accent carrying deep-teal ink. Dark-anchored with generous negative space; nature photography supplies all the color. The dark reads premium only with disciplined contrast.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Editorial hero: oversized condensed-serif headline, poetic one-liner, one quiet CTA. A dark full-bleed garden photo may sit behind it; restraint over badges.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "editorial"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "spotlight"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Poetic-editorial premium: evocative but concrete ('where green dreams take root'), numbered services, uppercase micro-eyebrows. Fewer words, larger type. Projects and craft carry the persuasion, not offers.",
+      "referenceBrands": [
+        "Langard (Framer template)",
+        "high-end landscape architecture studios",
+        "Kinfolk-adjacent garden editorial"
+      ],
+      "photographyRules": {
+        "requiredTone": "rich nature/garden photography — lush textures, dusk or golden-hour moodiness welcome",
+        "reject": [
+          "flat midday snapshots",
+          "suburban lawn stock",
+          "oversaturated HDR"
+        ],
+        "minHeroResolution": [
+          2400,
+          1400
+        ]
+      },
+      "bannedDesign": [
+        "strike-through price anchoring",
+        "urgency bars",
+        "emoji anywhere",
+        "rounded-pill buttons",
+        "more than one accent color"
+      ],
+      "bannedCopyPatterns": [
+        "discount language",
+        "exclamation points",
+        "direct-response urgency claims"
+      ],
+      "seo": {
+        "schemaOrg": "LocalBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "design-studio promise + specialty + region — same promise as H1"
+      }
+    },
+    {
+      "id": "rapid_shield",
+      "version": "1.0.0",
+      "vibe": "shield",
+      "fonts": {
+        "heading": "Manrope",
+        "body": "Manrope"
+      },
+      "paletteLogic": "Clean white base, light gray cards, one yellow-olive accent (dark enough for text and focus rings on white). A brighter acid-yellow brand override (with near-black ink) is allowed only when buttons stay the sole accent surface. Reserve the accent for CTAs and key highlights so it never dilutes.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Centered conversion hero: safety-forward headline, dual CTAs (book now + phone number), trust chips for experience and 24/7 availability directly beneath.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "classic"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "pain",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Reassuring direct-response: reliable, certified, eco-friendly, guaranteed. Mild urgency via 24/7 and emergency framing — never panic. Stats bars with inspections, locations, satisfaction percentages.",
+      "referenceBrands": [
+        "Pestora (Framer template)",
+        "Terminix clarity, local-operator warmth",
+        "modern SaaS landing conventions applied to a trade"
+      ],
+      "photographyRules": {
+        "requiredTone": "uniformed technicians on the job — professional, well-lit, reassuring context",
+        "reject": [
+          "close-up pest/insect macro shots",
+          "hazmat fear imagery",
+          "dark moody lighting"
+        ],
+        "minHeroResolution": [
+          1600,
+          1000
+        ]
+      },
+      "bannedDesign": [
+        "dark backgrounds",
+        "serif display type",
+        "red alarm color as accent",
+        "glassmorphism"
+      ],
+      "bannedCopyPatterns": [
+        "fear-mongering infestation imagery in words",
+        "fake countdown timers",
+        "guarantees without stated terms"
+      ],
+      "seo": {
+        "schemaOrg": "PestControlService",
+        "titleMaxChars": 60,
+        "descriptionShape": "safe-again promise + 24/7 availability + city — same promise as H1"
+      }
+    },
+    {
+      "id": "modern_precision",
+      "version": "1.0.0",
+      "vibe": "precision",
+      "fonts": {
+        "heading": "Outfit",
+        "body": "Outfit"
+      },
+      "paletteLogic": "Cool white base with soft gray-blue surfaces and one deep navy accent on pill CTAs. Understated, medium-weight typography — precision reads through spacing and numbers, not boldness.",
+      "accessibilityFloor": {
+        "bodyContrastMin": 4.5,
+        "uiContrastMin": 3,
+        "focusRing": "required, 2px, accent color"
+      },
+      "heroStyle": "Split hero: rating badge above a tight medium-weight headline, dual CTAs, product-in-situ photo right. Numeric proof (reviews, years, projects) directly under the fold.",
+      "sectionPlan": [
+        {
+          "type": "hero",
+          "variant": "split"
+        },
+        {
+          "type": "bigNumbers",
+          "variant": "classic"
+        },
+        {
+          "type": "plan",
+          "variant": "classic"
+        },
+        {
+          "type": "socialProof",
+          "variant": "spotlight"
+        },
+        {
+          "type": "guarantee",
+          "variant": "classic"
+        },
+        {
+          "type": "faq",
+          "variant": "classic"
+        }
+      ],
+      "copyRegister": "Premium-professional manufacturer voice with concrete proof points: delivery-day numbers, warranty terms, review counts, awards. Serves homeowners and B2B/dealer readers in the same register.",
+      "referenceBrands": [
+        "Shadory (Framer template)",
+        "European building-product manufacturers",
+        "Clopay/Somfy positioning done modern"
+      ],
+      "photographyRules": {
+        "requiredTone": "architectural product-in-situ shots — installed doors/blinds/systems on modern homes, clean lines",
+        "reject": [
+          "cluttered job sites",
+          "warehouse racking",
+          "renders that read as fake"
+        ],
+        "minHeroResolution": [
+          2000,
+          1200
+        ]
+      },
+      "bannedDesign": [
+        "heavy black display weights",
+        "neon accents",
+        "serif display type",
+        "urgency bars"
+      ],
+      "bannedCopyPatterns": [
+        "discount-led headlines",
+        "exclamation points",
+        "vague 'premium quality' claims without a number or term behind them"
+      ],
+      "seo": {
+        "schemaOrg": "HomeAndConstructionBusiness",
+        "titleMaxChars": 60,
+        "descriptionShape": "product + install promise + region — same promise as H1"
       }
     }
   ]
