@@ -290,6 +290,16 @@ export interface SiteConfig {
     enabled: boolean;
     headline?: string;
     testimonials: Testimonial[];
+    /**
+     * Aggregate review stats for source-branded variants
+     * (socialProof/google). Only set from real review-platform data.
+     */
+    aggregate?: {
+      rating: number;
+      count: number;
+      source?: string;
+      url?: string;
+    };
   };
 
   about: {

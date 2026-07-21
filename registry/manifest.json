@@ -1,5 +1,5 @@
 {
-  "registryVersion": "1.2.0",
+  "registryVersion": "1.3.0",
   "vibes": [
     "midnight",
     "editorial",
@@ -354,6 +354,31 @@
           "status": "stable",
           "since": "1.0.0",
           "id": "socialProof/classic"
+        },
+        {
+          "section": "socialProof",
+          "variant": "google",
+          "name": "Google review wall",
+          "description": "Reviews styled like native Google reviews: G logo, amber stars, letter avatars, relative dates, plus an aggregate rating header when socialProof.aggregate is set. Reads as third-party proof, not site copy.",
+          "useWhen": [
+            "real Google Business Profile reviews were imported (verbatim, with authors)",
+            "the business's Google rating/review count is itself a selling point"
+          ],
+          "avoidWhen": [
+            "reviews did not come from Google",
+            "fewer than 2 reviews — a sparse Google wall reads as weak proof"
+          ],
+          "requiredFields": [
+            "testimonials"
+          ],
+          "optionalFields": [
+            "headline",
+            "aggregate"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.3.0",
+          "id": "socialProof/google"
         },
         {
           "section": "socialProof",

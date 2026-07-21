@@ -115,6 +115,7 @@ export const FIXTURES: SectionFixtures = {
   socialProof: {
     enabled: true,
     headline: "Real homeowners. Real roofs.",
+    aggregate: { rating: 4.9, count: 312, source: "Google", url: "https://maps.google.com" },
     testimonials: [
       {
         name: "Marcus Reyes",
@@ -123,6 +124,7 @@ export const FIXTURES: SectionFixtures = {
         quote:
           "Quoted Tuesday, installed Thursday and Friday, spotless lawn Saturday. The warranty paperwork was in my inbox before the crew left.",
         rating: 5,
+        date: "2 months ago",
         source: "Google",
         result: "2-day install",
       },
@@ -133,6 +135,7 @@ export const FIXTURES: SectionFixtures = {
         quote:
           "Two other companies wouldn't put their quote in writing. These folks did, and the final invoice matched it to the dollar.",
         rating: 5,
+        date: "3 weeks ago",
         source: "Google",
         result: "Quote matched invoice",
       },

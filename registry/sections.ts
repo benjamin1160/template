@@ -1,7 +1,7 @@
 import type { SectionInstance } from "../site.config.types";
 import type { DesignVibe, SectionDef, VariantDef } from "./types";
 
-export const REGISTRY_VERSION = "1.2.0";
+export const REGISTRY_VERSION = "1.3.0";
 
 /**
  * The classic hormozi order — exactly the section sequence app/page.tsx
@@ -248,6 +248,26 @@ export const SECTIONS: SectionDef[] = [
         supportedVibes: "all",
         status: "stable",
         since: "1.0.0",
+      }),
+      v({
+        section: "socialProof",
+        variant: "google",
+        name: "Google review wall",
+        description:
+          "Reviews styled like native Google reviews: G logo, amber stars, letter avatars, relative dates, plus an aggregate rating header when socialProof.aggregate is set. Reads as third-party proof, not site copy.",
+        useWhen: [
+          "real Google Business Profile reviews were imported (verbatim, with authors)",
+          "the business's Google rating/review count is itself a selling point",
+        ],
+        avoidWhen: [
+          "reviews did not come from Google",
+          "fewer than 2 reviews — a sparse Google wall reads as weak proof",
+        ],
+        requiredFields: ["testimonials"],
+        optionalFields: ["headline", "aggregate"],
+        supportedVibes: "all",
+        status: "stable",
+        since: "1.3.0",
       }),
       v({
         section: "socialProof",

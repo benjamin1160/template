@@ -240,6 +240,14 @@ export const siteConfigSchema = z.object({
       enabled: z.boolean(),
       headline: z.string().optional(),
       testimonials: z.array(testimonial),
+      aggregate: z
+        .object({
+          rating: z.number(),
+          count: z.number(),
+          source: z.string().optional(),
+          url: z.string().optional(),
+        })
+        .optional(),
     })
     .optional(),
 
