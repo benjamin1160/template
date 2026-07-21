@@ -2,7 +2,7 @@ import type { ArchetypeDef } from "../types";
 
 export const playfulEnergetic: ArchetypeDef = {
   id: "playful_energetic",
-  version: "1.0.0",
+  version: "1.1.0",
   vibe: "playful",
   fonts: { heading: "Nunito", body: "Nunito" },
   paletteLogic:
@@ -19,6 +19,7 @@ export const playfulEnergetic: ArchetypeDef = {
     { type: "bigNumbers", variant: "classic" },
     { type: "plan", variant: "classic" },
     { type: "socialProof", variant: "classic" },
+    { type: "gallery", variant: "classic" },
     { type: "guarantee", variant: "classic" },
     { type: "faq", variant: "classic" },
   ],

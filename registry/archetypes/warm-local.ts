@@ -2,7 +2,7 @@ import type { ArchetypeDef } from "../types";
 
 export const warmLocal: ArchetypeDef = {
   id: "warm_local",
-  version: "1.0.0",
+  version: "1.1.0",
   vibe: "warm",
   fonts: { heading: "Fraunces", body: "Inter" },
   paletteLogic:
@@ -17,9 +17,9 @@ export const warmLocal: ArchetypeDef = {
   sectionPlan: [
     { type: "hero", variant: "split" },
     { type: "bigNumbers", variant: "classic" },
-    { type: "pain", variant: "classic" },
     { type: "plan", variant: "classic" },
     { type: "socialProof", variant: "classic" },
+    { type: "gallery", variant: "classic" },
     { type: "guarantee", variant: "classic" },
     { type: "faq", variant: "classic" },
   ],

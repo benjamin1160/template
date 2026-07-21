@@ -2,7 +2,7 @@ import type { ArchetypeDef } from "../types";
 
 export const boldConversion: ArchetypeDef = {
   id: "bold_conversion",
-  version: "1.0.0",
+  version: "1.1.0",
   vibe: "voltage",
   fonts: { heading: "Space Grotesk", body: "Inter" },
   paletteLogic:
@@ -17,11 +17,11 @@ export const boldConversion: ArchetypeDef = {
   sectionPlan: [
     { type: "hero", variant: "classic" },
     { type: "bigNumbers", variant: "classic" },
-    { type: "pain", variant: "classic" },
     { type: "plan", variant: "classic" },
     { type: "valueStack", variant: "classic" },
     { type: "guarantee", variant: "classic" },
     { type: "socialProof", variant: "classic" },
+    { type: "gallery", variant: "classic" },
     { type: "faq", variant: "classic" },
   ],
   copyRegister:

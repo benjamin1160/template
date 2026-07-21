@@ -1,12 +1,13 @@
 import type { SectionInstance } from "../site.config.types";
 import type { DesignVibe, SectionDef, VariantDef } from "./types";
 
-export const REGISTRY_VERSION = "1.1.0";
+export const REGISTRY_VERSION = "1.2.0";
 
 /**
- * The classic hormozi order — exactly the section sequence app/page.tsx
- * hardcoded before the registry existed. Configs without a `sections`
- * array keep rendering identically.
+ * The classic hormozi order — the section sequence app/page.tsx
+ * hardcoded before the registry existed, plus later optional sections
+ * (gallery) that only render when their config slice exists. Configs
+ * without a `sections` array keep rendering identically.
  */
 export const DEFAULT_SECTIONS: SectionInstance[] = [
   { type: "hero" },
@@ -16,6 +17,7 @@ export const DEFAULT_SECTIONS: SectionInstance[] = [
   { type: "valueStack" },
   { type: "guarantee" },
   { type: "socialProof" },
+  { type: "gallery" },
   { type: "faq" },
 ];
 
@@ -256,6 +258,31 @@ export const SECTIONS: SectionDef[] = [
         supportedVibes: "all",
         status: "stable",
         since: "1.1.0",
+      }),
+    ],
+  },
+  {
+    type: "gallery",
+    configKey: "gallery",
+    required: false,
+    defaultVariant: "classic",
+    variants: [
+      v({
+        section: "gallery",
+        variant: "classic",
+        name: "Photo gallery grid",
+        description:
+          "Masonry grid of real business photos at natural aspect ratios — the work, the place, the people. Lazy-loaded.",
+        useWhen: [
+          "4+ real photos of actual work, premises, or people exist",
+          "visual trades (salons, remodeling, food, pets, landscaping) where seeing the work sells it",
+        ],
+        avoidWhen: ["only stock or low-quality imagery is available"],
+        requiredFields: ["images"],
+        optionalFields: ["headline"],
+        supportedVibes: "all",
+        status: "stable",
+        since: "1.2.0",
       }),
     ],
   },

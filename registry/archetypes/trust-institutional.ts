@@ -2,7 +2,7 @@ import type { ArchetypeDef } from "../types";
 
 export const trustInstitutional: ArchetypeDef = {
   id: "trust_institutional",
-  version: "1.0.0",
+  version: "1.1.0",
   vibe: "crisp",
   fonts: { heading: "Manrope", body: "Inter" },
   paletteLogic:
@@ -17,9 +17,9 @@ export const trustInstitutional: ArchetypeDef = {
   sectionPlan: [
     { type: "hero", variant: "split" },
     { type: "bigNumbers", variant: "classic" },
-    { type: "pain", variant: "classic" },
     { type: "plan", variant: "classic" },
     { type: "socialProof", variant: "classic" },
+    { type: "gallery", variant: "classic" },
     { type: "guarantee", variant: "classic" },
     { type: "faq", variant: "classic" },
   ],

@@ -115,6 +115,7 @@ export type SectionType =
   | "valueStack"
   | "guarantee"
   | "socialProof"
+  | "gallery"
   | "faq";
 
 /**
@@ -283,6 +284,16 @@ export interface SiteConfig {
       source?: string;
       url?: string;
     };
+  };
+
+  /**
+   * Photo gallery of the business's real work, place, or people —
+   * populated by the quick-launch pipeline from scraped/GBP photos.
+   */
+  gallery?: {
+    enabled: boolean;
+    headline?: string;
+    images: { src: string; alt: string }[];
   };
 
   about: {

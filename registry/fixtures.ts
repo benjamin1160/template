@@ -12,6 +12,7 @@ export interface SectionFixtures {
   valueStack: NonNullable<SiteConfig["valueStack"]>;
   guarantee: NonNullable<SiteConfig["guarantee"]>;
   socialProof: NonNullable<SiteConfig["socialProof"]>;
+  gallery: NonNullable<SiteConfig["gallery"]>;
   faq: NonNullable<SiteConfig["faq"]>;
 }
 
@@ -115,6 +116,7 @@ export const FIXTURES: SectionFixtures = {
   socialProof: {
     enabled: true,
     headline: "Real homeowners. Real roofs.",
+    aggregate: { rating: 4.9, count: 812, source: "Google" },
     testimonials: [
       {
         name: "Marcus Reyes",
@@ -146,6 +148,18 @@ export const FIXTURES: SectionFixtures = {
         source: "Yelp",
         result: "Insurance handled",
       },
+    ],
+  },
+  gallery: {
+    enabled: true,
+    headline: "Real roofs, real streets, this year.",
+    images: [
+      { src: "https://picsum.photos/seed/roof-a/900/700", alt: "Completed shingle roof on a two-story Austin home" },
+      { src: "https://picsum.photos/seed/roof-b/900/1100", alt: "Crew installing underlayment at sunrise" },
+      { src: "https://picsum.photos/seed/roof-c/900/650", alt: "Standing-seam metal roof after a storm replacement" },
+      { src: "https://picsum.photos/seed/roof-d/900/900", alt: "Ridge detail with new venting" },
+      { src: "https://picsum.photos/seed/roof-e/900/750", alt: "Before-and-after of a hail-damaged roof" },
+      { src: "https://picsum.photos/seed/roof-f/900/1000", alt: "Finished roofline against a clear sky" },
     ],
   },
   faq: {
