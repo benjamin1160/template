@@ -38,11 +38,21 @@ export default function SocialProofSpotlight({
   return (
     <section id="proof" className="bg-bg py-20 md:py-28">
       <div className="mx-auto max-w-5xl px-6 sm:px-8">
-        {socialProof.headline && (
+        {(socialProof.headline || socialProof.aggregate) && (
           <div className="text-center mb-14">
-            <h2 className="display text-4xl sm:text-5xl md:text-6xl text-fg">
-              {socialProof.headline}
-            </h2>
+            {socialProof.headline && (
+              <h2 className="display text-4xl sm:text-5xl md:text-6xl text-fg">
+                {socialProof.headline}
+              </h2>
+            )}
+            {socialProof.aggregate && (
+              <p className={`text-sm text-muted ${socialProof.headline ? "mt-4" : ""}`}>
+                <span className="font-bold text-fg">{socialProof.aggregate.rating}</span>
+                {" · "}
+                {socialProof.aggregate.count} reviews
+                {socialProof.aggregate.source ? ` on ${socialProof.aggregate.source}` : ""}
+              </p>
+            )}
           </div>
         )}
 
