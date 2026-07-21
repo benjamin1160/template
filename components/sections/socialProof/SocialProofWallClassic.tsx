@@ -23,15 +23,47 @@ function Stars({ rating }: { rating: number }) {
   );
 }
 
+function AggregateBadge({
+  aggregate,
+}: {
+  aggregate: NonNullable<NonNullable<SiteConfig["socialProof"]>["aggregate"]>;
+}) {
+  const label = `${aggregate.rating} · ${aggregate.count} reviews${
+    aggregate.source ? ` on ${aggregate.source}` : ""
+  }`;
+  const badge = (
+    <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold text-fg">
+      <svg viewBox="0 0 20 20" className="h-4 w-4 text-accent" fill="currentColor" aria-hidden="true">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.161c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.196-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.98 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
+      </svg>
+      {label}
+    </span>
+  );
+  return aggregate.url ? (
+    <a href={aggregate.url} target="_blank" rel="noopener noreferrer">
+      {badge}
+    </a>
+  ) : (
+    badge
+  );
+}
+
 export default function SocialProofWall({ socialProof }: SocialProofWallProps) {
   return (
     <section id="proof" className="bg-bg py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
-        {socialProof.headline && (
+        {(socialProof.headline || socialProof.aggregate) && (
           <div className="text-center mb-14">
-            <h2 className="display text-4xl sm:text-5xl md:text-6xl text-fg">
-              {socialProof.headline}
-            </h2>
+            {socialProof.headline && (
+              <h2 className="display text-4xl sm:text-5xl md:text-6xl text-fg">
+                {socialProof.headline}
+              </h2>
+            )}
+            {socialProof.aggregate && (
+              <div className={socialProof.headline ? "mt-6" : ""}>
+                <AggregateBadge aggregate={socialProof.aggregate} />
+              </div>
+            )}
           </div>
         )}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">

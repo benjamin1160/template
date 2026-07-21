@@ -45,7 +45,18 @@ export default function JsonLd({ config }: JsonLdProps) {
     };
   }
 
-  if (avgRating && ratings.length > 0) {
+  // Real aggregate review data (e.g. Google Business Profile) beats an
+  // average computed from the handful of quoted testimonials.
+  const aggregate = config.socialProof?.aggregate;
+  if (aggregate && aggregate.count > 0) {
+    data.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: aggregate.rating,
+      reviewCount: aggregate.count,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  } else if (avgRating && ratings.length > 0) {
     data.aggregateRating = {
       "@type": "AggregateRating",
       ratingValue: avgRating,

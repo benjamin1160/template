@@ -272,6 +272,17 @@ export interface SiteConfig {
     enabled: boolean;
     headline?: string;
     testimonials: Testimonial[];
+    /**
+     * Real aggregate review data (e.g. from the business's Google
+     * Business Profile) — set by the quick-launch pipeline, never
+     * derived from testimonials. `url` links to the review source.
+     */
+    aggregate?: {
+      rating: number;
+      count: number;
+      source?: string;
+      url?: string;
+    };
   };
 
   about: {
