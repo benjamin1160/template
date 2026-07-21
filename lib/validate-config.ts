@@ -12,6 +12,7 @@ const sectionTypeEnum = z.enum([
   "valueStack",
   "guarantee",
   "socialProof",
+  "gallery",
   "faq",
 ]);
 
@@ -248,6 +249,14 @@ export const siteConfigSchema = z.object({
           url: z.string().optional(),
         })
         .optional(),
+    })
+    .optional(),
+
+  gallery: z
+    .object({
+      enabled: z.boolean(),
+      headline: z.string().optional(),
+      images: z.array(z.object({ src: z.string(), alt: z.string() })),
     })
     .optional(),
 

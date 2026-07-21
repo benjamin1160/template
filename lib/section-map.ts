@@ -9,6 +9,7 @@ import HowItWorksClassic from "@/components/sections/plan/HowItWorksClassic";
 import ValueStackClassic from "@/components/sections/valueStack/ValueStackClassic";
 import GuaranteeBadgeClassic from "@/components/sections/guarantee/GuaranteeBadgeClassic";
 import SocialProofWallClassic from "@/components/sections/socialProof/SocialProofWallClassic";
+import GalleryGridClassic from "@/components/sections/gallery/GalleryGridClassic";
 import FAQClassic from "@/components/sections/faq/FAQClassic";
 
 /**
@@ -28,6 +29,7 @@ export const SECTION_COMPONENTS = {
   "valueStack/classic": ValueStackClassic,
   "guarantee/classic": GuaranteeBadgeClassic,
   "socialProof/classic": SocialProofWallClassic,
+  "gallery/classic": GalleryGridClassic,
   "faq/classic": FAQClassic,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } as const satisfies Record<string, ComponentType<any>>;

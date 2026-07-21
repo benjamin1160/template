@@ -2,7 +2,7 @@ import type { ArchetypeDef } from "../types";
 
 export const editorialMinimal: ArchetypeDef = {
   id: "editorial_minimal",
-  version: "1.0.0",
+  version: "1.1.0",
   vibe: "editorial",
   fonts: { heading: "Fraunces", body: "Inter" },
   paletteLogic:
@@ -16,9 +16,9 @@ export const editorialMinimal: ArchetypeDef = {
     "Typography-led editorial hero: oversized serif headline, rule line, single CTA. No badges, no glow, no background imagery.",
   sectionPlan: [
     { type: "hero", variant: "editorial" },
-    { type: "pain", variant: "classic" },
     { type: "plan", variant: "classic" },
     { type: "socialProof", variant: "spotlight" },
+    { type: "gallery", variant: "classic" },
     { type: "guarantee", variant: "classic" },
     { type: "faq", variant: "classic" },
   ],

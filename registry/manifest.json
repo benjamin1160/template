@@ -1,5 +1,5 @@
 {
-  "registryVersion": "1.1.0",
+  "registryVersion": "1.2.0",
   "vibes": [
     "midnight",
     "editorial",
@@ -61,6 +61,9 @@
     },
     {
       "type": "socialProof"
+    },
+    {
+      "type": "gallery"
     },
     {
       "type": "faq"
@@ -372,6 +375,37 @@
       ]
     },
     {
+      "type": "gallery",
+      "configKey": "gallery",
+      "required": false,
+      "defaultVariant": "classic",
+      "variants": [
+        {
+          "section": "gallery",
+          "variant": "classic",
+          "name": "Photo gallery grid",
+          "description": "Masonry grid of real business photos at natural aspect ratios — the work, the place, the people. Lazy-loaded.",
+          "useWhen": [
+            "4+ real photos of actual work, premises, or people exist",
+            "visual trades (salons, remodeling, food, pets, landscaping) where seeing the work sells it"
+          ],
+          "avoidWhen": [
+            "only stock or low-quality imagery is available"
+          ],
+          "requiredFields": [
+            "images"
+          ],
+          "optionalFields": [
+            "headline"
+          ],
+          "supportedVibes": "all",
+          "status": "stable",
+          "since": "1.2.0",
+          "id": "gallery/classic"
+        }
+      ]
+    },
+    {
       "type": "faq",
       "configKey": "faq",
       "required": false,
@@ -402,7 +436,7 @@
   "archetypes": [
     {
       "id": "trust_institutional",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "vibe": "crisp",
       "fonts": {
         "heading": "Manrope",
@@ -425,15 +459,15 @@
           "variant": "classic"
         },
         {
-          "type": "pain",
-          "variant": "classic"
-        },
-        {
           "type": "plan",
           "variant": "classic"
         },
         {
           "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "gallery",
           "variant": "classic"
         },
         {
@@ -484,7 +518,7 @@
     },
     {
       "id": "warm_local",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "vibe": "warm",
       "fonts": {
         "heading": "Fraunces",
@@ -507,15 +541,15 @@
           "variant": "classic"
         },
         {
-          "type": "pain",
-          "variant": "classic"
-        },
-        {
           "type": "plan",
           "variant": "classic"
         },
         {
           "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "gallery",
           "variant": "classic"
         },
         {
@@ -568,7 +602,7 @@
     },
     {
       "id": "bold_conversion",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "vibe": "voltage",
       "fonts": {
         "heading": "Space Grotesk",
@@ -591,10 +625,6 @@
           "variant": "classic"
         },
         {
-          "type": "pain",
-          "variant": "classic"
-        },
-        {
           "type": "plan",
           "variant": "classic"
         },
@@ -608,6 +638,10 @@
         },
         {
           "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "gallery",
           "variant": "classic"
         },
         {
@@ -651,7 +685,7 @@
     },
     {
       "id": "editorial_minimal",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "vibe": "editorial",
       "fonts": {
         "heading": "Fraunces",
@@ -670,16 +704,16 @@
           "variant": "editorial"
         },
         {
-          "type": "pain",
-          "variant": "classic"
-        },
-        {
           "type": "plan",
           "variant": "classic"
         },
         {
           "type": "socialProof",
           "variant": "spotlight"
+        },
+        {
+          "type": "gallery",
+          "variant": "classic"
         },
         {
           "type": "guarantee",
@@ -730,7 +764,7 @@
     },
     {
       "id": "playful_energetic",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "vibe": "playful",
       "fonts": {
         "heading": "Nunito",
@@ -758,6 +792,10 @@
         },
         {
           "type": "socialProof",
+          "variant": "classic"
+        },
+        {
+          "type": "gallery",
           "variant": "classic"
         },
         {
@@ -807,7 +845,7 @@
     },
     {
       "id": "premium_dark",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "vibe": "midnight",
       "fonts": {
         "heading": "Inter",
@@ -836,6 +874,10 @@
         {
           "type": "socialProof",
           "variant": "spotlight"
+        },
+        {
+          "type": "gallery",
+          "variant": "classic"
         },
         {
           "type": "guarantee",

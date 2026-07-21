@@ -2,7 +2,7 @@ import type { ArchetypeDef } from "../types";
 
 export const premiumDark: ArchetypeDef = {
   id: "premium_dark",
-  version: "1.0.0",
+  version: "1.1.0",
   vibe: "midnight",
   fonts: { heading: "Inter", body: "Inter" },
   paletteLogic:
@@ -19,6 +19,7 @@ export const premiumDark: ArchetypeDef = {
     { type: "bigNumbers", variant: "classic" },
     { type: "plan", variant: "classic" },
     { type: "socialProof", variant: "spotlight" },
+    { type: "gallery", variant: "classic" },
     { type: "guarantee", variant: "classic" },
     { type: "faq", variant: "classic" },
   ],
